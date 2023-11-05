@@ -1,0 +1,80 @@
+
+     body.btn {
+       min-height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        ;
+     }
+     
+     .btn {
+       /* Clean style */
+       -moz-appearance: none;
+       -webkit-appearance: none;
+       appearance: none;
+       border: none;
+
+       padding: 0;
+       color: black;
+       cursor: pointer;
+       /* Clean style */
+       
+       
+       --button-text-color-hover: white;
+       --border-color: #7D8082;
+       --button-background-color: #3f1b1b;
+   
+       --button-inner-border-color: transparent;
+       --button-bits-color: #EFFE71;
+       --button-bits-color-hover: #EFFE71;
+       
+       position: relative;
+       padding: 8px;
+       margin-bottom: 20px;
+       text-transform: uppercase;
+       font-weight: bold;
+       font-size: 14px;
+       transition: all .15s ease;
+     }
+     
+     .btn::before,
+     .btn::after {
+       content: '';
+       display: block;
+       position: absolute;
+       right: 0; left: 0;
+       height: calc(50% - 5px);
+       border: 1px solid var(--border-color);
+       transition: all .15s ease;
+     }
+     
+     .btn::before {
+       top: 0;
+       border-bottom-width: 0;
+     }
+     
+     .btn::after {
+       bottom: 0;
+       border-top-width: 0;
+     }
+     
+     .btn:active,
+     .btn:focus {
+       outline: none;
+     }
+     
+     .btn:active::before,
+     .btn:active::after {
+       right: 3px;
+       left: 3px;
+     }
+     
+     .btn:active::before {
+       top: 3px;
+     }
+     
+     .btn:active::after {
+       bottom: 3px;
+     }
+     
+     
