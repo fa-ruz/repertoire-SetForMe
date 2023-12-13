@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/shy0dic.css">
 </head>
 
-<nav class="navbar navbar-expand-lg bg-black">
+<nav class="navbar navbar-expand-lg bg-black header2-nav">
     <div class="container-fluid">
         <a class="navbar-brand me-auto" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-noir.png" alt="Logo" width="290" height="46">

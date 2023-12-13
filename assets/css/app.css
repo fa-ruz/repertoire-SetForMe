@@ -1,3 +1,37 @@
+/* Add this style rule to make links in the navbar white */
+.header2-nav .nav-link {
+    color: white !important;
+}
+
+/* Add this style rule to make dropdown items white */
+.header2-nav .nav-item.dropdown:hover .dropdown-menu a {
+    color: white !important;
+}
+
+.header2-nav {
+  padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 150px; /* Adjust the bottom padding as needed */
+}
+
+.header2-nav .navbar {
+  height: auto; /* Allow the navbar to adjust its height based on content */
+}
+
+.header2-nav .navbar-brand img {
+  max-height: 100%; /* Make sure the logo height is responsive */
+}
+
+/* Add this style rule to make links in the navbar white */
+.header2-nav .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+/* Add this style rule to make dropdown items white */
+.header2-nav .navbar-nav .nav-item.dropdown:hover .dropdown-menu a {
+  color: rgb(0, 0, 0) !important;
+}
+
+
 /* Styles personnalisés pour les cartes */
 .custom-card {
     height: 400px;
