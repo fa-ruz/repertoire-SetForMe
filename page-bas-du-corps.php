@@ -1,6 +1,18 @@
 <?php get_template_part('header2'); ?>
 
 <div class="text-bg p-3"><h1>BAS DU CORPS</h1></div>
+<?php
+            $titresList = new WP_Query([
+                'post_type' => 'titres',
+                'posts_per_page' => 3
+            ]);
+        ?>
+
+<?php while ( $exercicesList->have_posts() ) : $exercicesList->the_post(); ?>
+<div class="text-bg p-3"><h1><?php the_title(); ?></h1></div>
+        <?php endwhile; ?>
+
+
 
 <div class="spacer"></div>
 

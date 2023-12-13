@@ -53,3 +53,5 @@ function create_posttypes() {
     ]);
 }
 add_action('init', 'create_posttypes');
+
+
