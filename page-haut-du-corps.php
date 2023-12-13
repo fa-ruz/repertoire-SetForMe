@@ -1,12 +1,6 @@
-<?php get_template_part('header2'); ?>
-
-
-<div class="text-bg p-3"><h1>HAUT DU CORPS</h1></div>
-<div class="spacer"></div>
-
-
+<?php get_header(); ?>
 <div class="container mt-5">
-
+    
     <?php
     $series = array(
         array(
@@ -35,7 +29,7 @@
                 'orderby'        => 'date', // Vous pouvez changer 'date' selon votre préférence
                 'order'          => 'ASC', // 'DESC' pour trier du plus récent au plus ancien, 'ASC' pour l'ordre inverse
             ]);
-
+            
             ?>
             <?php while ($exercicesList->have_posts()) : $exercicesList->the_post(); ?>
                 <div class="col-md-4">
@@ -58,3 +52,5 @@
 </div>
 
 <?php get_footer(); ?>
+
+
