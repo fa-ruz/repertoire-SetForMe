@@ -122,6 +122,11 @@ h1 {
   text-align: center;
   /* Ajoutez d'autres styles si nécessaire */
 }
+
+.navbar-quizz img {
+  margin-top: 100px; 
+}
+
 .site-footer
 {
   background-color:#000000;

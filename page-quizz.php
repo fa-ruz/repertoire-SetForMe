@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('header3'); ?>
 <script>
 // Votre code JavaScript pour le quizz ici
 var quizData = {
