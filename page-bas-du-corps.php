@@ -1,6 +1,10 @@
 <?php get_template_part('header2'); ?>
-<div class="container mt-5">
-    
+
+<div class="text-bg p-3"><h1>BAS DU CORPS</h1></div>
+
+<div class="spacer"></div>
+
+<div class="container mt-5">    
 <h2 class="video-title">5 minutes</h2>
     <!-- Première série -->
     <div class="row mb-4">
@@ -153,6 +157,5 @@
     </div>
 
 </div>
-
 <?php get_footer(); ?>
 
