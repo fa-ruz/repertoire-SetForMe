@@ -1,59 +1,23 @@
-<?php get_template_part('header2'); ?>
 
-<div class="text-bg p-3"><h1>BAS DU CORPS</h1></div>
 <?php
-            $titresList = new WP_Query([
-                'post_type' => 'titres',
-                'posts_per_page' => 3
-            ]);
-        ?>
-
-<?php while ( $exercicesList->have_posts() ) : $exercicesList->the_post(); ?>
-<div class="text-bg p-3"><h1><?php the_title(); ?></h1></div>
-        <?php endwhile; ?>
-
-
-
-<div class="spacer"></div>
-
-<div class="container mt-5">    
+get_header(); ?>
+<div class="container mt-5">
+    
 <h2 class="video-title">5 minutes</h2>
     <!-- Première série -->
     <div class="row mb-4">
         <div class="col-md-4">
-        <?php
-            $exercicesList = new WP_Query([
-                'post_type' => 'exercices',
-                'posts_per_page' => 3
-            ]);
-        ?>
-
-        <?php while ( $exercicesList->have_posts() ) : $exercicesList->the_post(); ?>
-            <div class="card custom-card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/Rectangle 117.png" alt="test" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h1>Allblanc TV</h1>
-                        <p class="card-text">Il s’agit essentiellement d’une routine d’entraînement à domicile (aucun équipement requis) que vous pouvez faire partout, à la maison ou au gymnase.</p>
-                        <a href="https://youtu.be/1fjeQKI-5wg?si=thBEZ_Zh867e9is9" class="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+        <div class="card custom-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/Rectangle 117.png" alt="test" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h1>Allblanc TV</h1>
+                    <p class="card-text">Il s’agit essentiellement d’une routine d’entraînement à domicile (aucun équipement requis) que vous pouvez faire partout, à la maison ou au gymnase.</p>
+                    <a href="https://youtu.be/1fjeQKI-5wg?si=thBEZ_Zh867e9is9" class="">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-        <?php endwhile; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <div class="col-md-4">
             <div class="card custom-card">

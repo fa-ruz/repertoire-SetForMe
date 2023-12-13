@@ -1,8 +1,5 @@
-<?php get_template_part('header2'); ?>
-
-<div class="text-bg p-3"><h1>ETIREMENTS</h1></div>
-
-<div class="spacer"></div>
+<?php
+get_header(); ?>
 <div class="container mt-5">
     
 <h2 class="video-title">5 minutes</h2>
