@@ -1,38 +1,48 @@
-/* Add this style rule to make links in the navbar white */
-.header2-nav .nav-link {
-    color: white !important;
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  border-radius: 0;
+}
+.btn {
+  border-radius: 0;
 }
 
-/* Add this style rule to make dropdown items white */
+
+.header2-nav .nav-link {
+    color: white;
+}
+
 .header2-nav .nav-item.dropdown:hover .dropdown-menu a {
-    color: white !important;
+    color: white;
 }
 
 .header2-nav {
-  padding-top: 20px; /* Adjust the top padding as needed */
-  padding-bottom: 150px; /* Adjust the bottom padding as needed */
+  padding-top: 20px;
+  padding-bottom: 150px;
 }
 
 .header2-nav .navbar {
-  height: auto; /* Allow the navbar to adjust its height based on content */
+  height: auto;
 }
 
 .header2-nav .navbar-brand img {
-  max-height: 100%; /* Make sure the logo height is responsive */
+  max-height: 100%;
 }
 
-/* Add this style rule to make links in the navbar white */
 .header2-nav .navbar-nav .nav-link {
-  color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255);
 }
 
-/* Add this style rule to make dropdown items white */
 .header2-nav .navbar-nav .nav-item.dropdown:hover .dropdown-menu a {
-  color: rgb(0, 0, 0) !important;
+  color: rgb(0, 0, 0);
 }
 
+.header2-nav .navbar-nav .nav-item.dropdown .dropdown-menu {
+  border-radius: 0;
+}
 
-/* Styles personnalisés pour les cartes */
+.header2-nav .btn {
+  border-radius: 0;
+}
+
 .custom-card {
     height: 400px;
     background-color: #ededed;
