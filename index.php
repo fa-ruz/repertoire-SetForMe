@@ -1,5 +1,8 @@
 <?php
 get_header(); ?>
+
+<img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 246.png" alt="test" class="img-fluid">
+
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
 
