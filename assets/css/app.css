@@ -54,13 +54,17 @@
   transform: translateY(-50%);
 }
 
-.text-bg h1 {
+.text-bg h2 {
   background-color: #C0ABFF; 
   color: white; 
   display: inline-block;
   padding: 20px; 
   margin-top: 5px; 
   font-size: 50px;
+}
+h2 {
+font-family:'Montserrat', sans-serif;
+font-weight: 800;
 }
 
 .spacer {

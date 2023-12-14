@@ -6,34 +6,30 @@
             <div class="col-sm-6">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets\images\logo-blanc.png" alt="Logo" width="290" height="46">
             </div>
-
             <div class="col-md">
-                <h6>Categories</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Haut du corps</a></li>
-                    <li><a href="#">Bas du corps</a></li>
-                    <li><a href="#">Tout le corps</a></li>
-                    <li><a href="#">Etirements</a></li>
-                </ul>
-            </div>
+    <h6>Categories</h6>
+    <ul class="footer-links">
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('haut-du-corps'))); ?>">Haut du corps</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('bas-du-corps'))); ?>">Bas du corps</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('tout-le-corps'))); ?>">Tout le corps</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('etirements'))); ?>">Etirements</a></li>
+    </ul>
+</div>
 
-            <div class="col-md">
-                <h6>Quizz</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Faire le quizz</a></li>
-                </ul>
-            </div>
+<div class="col-md">
+    <h6>Quizz</h6>
+    <ul class="footer-links">
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('quizz'))); ?>">Faire le quizz</a></li>
+    </ul>
+</div>
 
-            <div class="col-md">
-                <h6>Infos</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-    </div>
+<div class="col-md">
+    <h6>Infos</h6>
+    <ul class="footer-links">
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('mentions-legales'))); ?>">Mentions légales</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('politique-confidentialite'))); ?>">Politique de confidentialité</a></li>
+    </ul>
+</div>
 
     <div class="container">
         <div class="row">
