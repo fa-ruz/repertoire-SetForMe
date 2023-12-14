@@ -1,7 +1,8 @@
 <?php
 get_header(); ?>
 
-<img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 246.png" alt="test" class="img-fluid">
+
+<img src="<?php echo get_template_directory_uri(); ?>/assets\images\accueil-formes.png" alt="test" class="img-fluid">
 
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
@@ -69,4 +70,6 @@ devient une étape vers votre meilleure version!</p></blockquote></div>
         <i class="bi bi-eye-fill"></i>
     </div>
             </div>
+
+           
 <?php get_footer(); ?>
