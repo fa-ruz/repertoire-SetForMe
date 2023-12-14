@@ -1,10 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url('/assets/images/accueil-formes.png');
-  background-size: cover;
-}
-
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
 }
@@ -130,8 +123,24 @@ h1 {
     margin-bottom: 40px; /* Marge en bas pour l'espace */
 }
 .blockquote {
+    text-align: center;
+    height: 786px;
+}
+
+blockquote p {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  /* Ajoutez d'autres styles si nécessaire */
+  margin-top: 350px; 
+  max-width: 60%;
+}
+
+.card-avis {
+  width: 573px;
+  height: 446px;
 }
 
 .navbar-quiz img {
