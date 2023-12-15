@@ -175,7 +175,6 @@ blockquote p {
 
 
 
-
 .site-footer
 {
   background-color:#000000;
@@ -322,4 +321,119 @@ blockquote p {
     margin-right:0;
     font-weight:600
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+:root{
+  --light-purple-color: #8854c0;
+  --light-color: #fff;
+  --dark-color: #000;
+  --grey-color: #ededed;
+  --transition: all 300ms ease-in-out;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz-title {
+  text-align: center;
+}
+.quiz-question {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.quiz-option li{
+  border-radius: 0rem;
+  margin: .7rem 0;
+  padding: .4rem 1.2rem;
+  cursor: pointer;
+  border: 3px solid var(--dark-color);
+  background-color: var(--grey-color);
+}
+
+.quiz-option li:active {
+  transform: scale(0.97);
+}
+
+.quiz-foot button{
+  border: none;
+  border-radius: 0.5rem;
+  outline: 0;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  initial-letter: 2px;
+
+}
+
+
+
+.quiz-container {
+  max-width: 600px; /* Réduire la largeur du cadre selon vos besoins */
+  margin: 0 auto; /* Centrer le cadre horizontalement */
+}
+
+.quiz-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.btn-retour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px; /* Ajuster la hauteur selon vos besoins */
+  text-align: center;
+  line-height: 40px; /* Pour centrer verticalement le texte */
+}
+
+
+
+.content-container {
+  min-height: 100vh; /* 100% de la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le reste de votre CSS ici */
+
+
+.icone {
+  width: 10px; /* Ajustez la largeur de l'icône selon vos besoins */
+  height: 10px; /* Ajustez la hauteur de l'icône selon vos besoins */
+  margin-right: 10px; /* Espace à droite de l'icône (ajustez selon vos besoins) */
 }
