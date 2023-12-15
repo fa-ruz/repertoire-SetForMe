@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-
+<body background="/assets\images\accueil-formes.png">
 
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
