@@ -16,43 +16,44 @@ Découvrez, choisissez, excellez.</p>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card mb-4 rounded-0 bg-black text-white">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 246.png" alt="test" class="img-fluid" width="727" height="432">
-    <div class="card-body d-flex flex-column">
-        <h4 class="card-title">HAUT DU CORPS</h4>
-        <a href="#" class="btn btn-primary mt-auto align-self-end">See Profile</a>
-    </div>
-            </div>
+        <?php
+        // Arguments de requête pour récupérer les articles de type 'categories'
+        $args = array(
+            'post_type' => 'categories',
+            'posts_per_page' => 4, // Nombre d'articles à afficher
+            'orderby' => 'date', // Ordonne par ID
+        );
 
-            <div class="card mb-4 rounded-0 bg-black text-white">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 251.png" alt="test" class="img-fluid" width="727" height="432">
-    <div class="card-body d-flex flex-column">
-        <h4 class="card-title">TOUT LE CORPS</h4>
-        <a href="#" class="btn btn-primary mt-auto align-self-end">See Profile</a>
-    </div>
-            </div>
-        </div>
+        $categories_query = new WP_Query($args);
 
-        <div class="col-md-6">
-            <div class="card mb-4 rounded-0 bg-black text-white">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 256.png" alt="test" class="img-fluid" width="727" height="432">
-    <div class="card-body d-flex flex-column">
-        <h4 class="card-title">BAS CORPS</h4>
-        <a href="#" class="btn btn-primary mt-auto align-self-end">See Profile</a>
-    </div>
-            </div>
-
-            <div class="card mb-4 rounded-0 bg-black text-white">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets\Groupe 261.png" alt="test" class="img-fluid" width="727" height="432">
-    <div class="card-body d-flex flex-column">
-        <h4 class="card-title">ETIREMENTS</h4>
-        <a href="#" class="btn btn-primary mt-auto align-self-end">See Profile</a>
-    </div>
-            </div>
-        </div>
+        // Vérifier si la requête a des articles
+        if ($categories_query->have_posts()) :
+            while ($categories_query->have_posts()) : $categories_query->the_post();
+        ?>
+                <div class="col-md-6">
+                    <div class="card mb-4 rounded-0 bg-black text-white" >
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="img-fluid" width="728" height="533">
+                        <?php endif; ?>
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" ><?php the_title(); ?></h4>
+                            <a href="<?php the_permalink(); ?>" class="btn mt-auto align-self-end" id="monBtn">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
+                            <span style="margin-left:10px;"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+            wp_reset_postdata(); // Réinitialiser les données de la requête
+        else :
+            echo 'Aucun article trouvé.';
+        endif;
+        ?>
     </div>
 </div>
+
 
 <div class="p-3 mb-2 bg-black text-white"><blockquote class="blockquote"><h3>A PROPOS</h3><br><p>SetForMe révolutionne votre parcours sportif en vous offrant une expérience unique
 et personnalisée. Notre site propose une vaste gamme de vidéos adaptées à vos 
