@@ -12,7 +12,7 @@
 <nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
         <a class="navbar-brand me-auto" href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-noir.png" alt="Logo" width="290" height="46">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-noir.png" alt="Logo" width="290" height="46">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-blanc.png" alt="Logo" width="290" height="46">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-blanc.png" alt="Logo" width="290" height="46">
             </div>
 
             <div class="col-md">
@@ -33,6 +33,7 @@
         </div>
         <hr>
     </div>
+
 
     <div class="container">
         <div class="row">

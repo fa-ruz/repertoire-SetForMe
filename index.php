@@ -1,9 +1,7 @@
 <?php
 get_header(); ?>
 
-<div class="image-accueil">
-<img src="<?php echo get_template_directory_uri(); ?>/assets\images\accueil-formes.png" alt="test" class="img-fluid">
-</div>
+
 
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
