@@ -63,13 +63,10 @@ $custom_query = new WP_Query($args);
 if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
-        <div class="">
+        <div class="text-bg-dark p-3">
             <blockquote class="blockquote">
-                <h3><?php the_title(); ?></h3>
-                <p><?php
-                    // Contenu de l'article
-                    the_content();
-                ?></p>
+                <?php the_title(); ?>
+                <?php the_content(); ?>
             </blockquote>
         </div>
 <?php
