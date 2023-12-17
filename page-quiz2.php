@@ -11,7 +11,7 @@
         <h2 class="quiz-question" id="question">Pour commencer, quelle partie spécifique de votre corps souhaitez-vous cibler et travailler avec nos vidéos ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('haut')">Haut du corps</li>
+            <li onclick="redirigerVersPageQuiz2('haut')">bip du corps</li>
           </div>
           
           <div class="col-md-6 text-center">
@@ -30,13 +30,3 @@
     function retourPage() {
       window.history.back();
     }
-
-    function redirigerVersPageQuiz2(partieDuCorps) {
-      // Utiliser window.location.href pour rediriger vers la page-quiz2.php
-      window.location.href = 'page-quiz2.php?partie=' + partieDuCorps;
-    }
-  </script>
-</body>
-
-
-
