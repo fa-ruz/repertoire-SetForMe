@@ -64,10 +64,8 @@ if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
         <div class="text-bg-dark p-3">
-            <blockquote class="blockquote">
-                <?php the_title(); ?>
+        <h3 class="blockqote-title" ><?php the_title(); ?></h3>
                 <?php the_content(); ?>
-            </blockquote>
         </div>
 <?php
     endwhile;
