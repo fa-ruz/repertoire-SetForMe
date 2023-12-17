@@ -1,18 +1,16 @@
 <?php
 get_header(); ?>
 
-<div class="container">
+
+
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
 
-</div>
 
 
- 
 <h3>NOS CATEGORIES</h3>
 <p>Explorez nos catégories de sport :<br>
 Découvrez, choisissez, excellez.</p>
-
 
 <div class="container">
     <div class="row">
@@ -54,47 +52,29 @@ Découvrez, choisissez, excellez.</p>
     </div>
 </div>
 
+<?php
+$args = array(
+    'post_type' => 'blockquote', // Spécifiez le type de publication personnalisé
+    'posts_per_page' => 1, // -1 pour afficher tous les articles, ajustez selon vos besoins
+);
 
-<div class="p-3 mb-2 bg-black text-white"><blockquote class="blockquote"><h3>A PROPOS</h3><br><p>SetForMe révolutionne votre parcours sportif en vous offrant une expérience unique
-et personnalisée. Notre site propose une vaste gamme de vidéos adaptées à vos 
-besoins sportifs spécifiques. Comment ? Grâce à notre quizz intelligent qui vous 
-guide dans la personnalisation de votre programme. Répondez à quelques questions
-simples, et découvrez des vidéos conçues sur mesure pour vous. De la musculation 
-à la flexibilité, SetForMe s'ajuste à vos objectifs, vous offrant une expérience fitness 
-aussi unique que vous l'êtes. Rejoignez-nous dans cette aventure où chaque séance
-devient une étape vers votre meilleure version!</p></blockquote></div>
+$custom_query = new WP_Query($args);
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card-avis mb-3 rounded-0 bg-black text-white" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-8">
-            <div class="card-body">
-              <p class="card-text">SetForMe a vraiment changé la donne pour moi. Les vidéos personnalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés.</p>
-              <p class="card-text mt-3"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+if ($custom_query->have_posts()) :
+    while ($custom_query->have_posts()) : $custom_query->the_post();
+?>
+        <div class="text-bg-dark p-3">
+        <h3 class="blockqote-title" ><?php the_title(); ?></h3>
+                <?php the_content(); ?>
         </div>
-      </div>
-    </div>
+<?php
+    endwhile;
+else :
+    // Aucun contenu trouvé
+    echo '<p>Aucun contenu trouvé</p>';
+endif;
 
-    <div class="col-md-6">
-      <div class="card-avis mb-3 rounded-0 bg-black text-white" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-8">
-            <div class="card-body">
-              <p class="card-text">SetForMe a vraiment changé la donne pour moi. Les vidéos personnalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés.</p>
-              <p class="card-text mt-3"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+wp_reset_postdata(); // Rétablir les données de publication originales
+?>
            
 <?php get_footer(); ?>
