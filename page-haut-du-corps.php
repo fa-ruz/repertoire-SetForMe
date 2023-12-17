@@ -41,9 +41,8 @@
                         <div class="card-body">
                             <h1><?php the_title(); ?></h1>
                             <p class="card-text"><?php the_content(); ?></p>
-                            <img src="<?php echo get_template_directory_uri(); ?> /assets\icon-oeil.png">
-                            <a href="https://youtu.be/1fjeQKI-5wg?si=thBEZ_Zh867e9is9" class="">
-                                <i class="bi bi-arrow-right"></i>
+                            <a href="<?php the_permalink(); ?>" class="btn mt-auto align-self-end" id="monBtn">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sur-bouton.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
                             </a>
                         </div>
                     </div>
@@ -53,6 +52,9 @@
     <?php endforeach; ?>
 
 </div>
+
+
+
 
 <?php get_footer(); ?>
 

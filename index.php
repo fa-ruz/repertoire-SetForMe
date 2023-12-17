@@ -52,6 +52,8 @@ Découvrez, choisissez, excellez.</p>
     </div>
 </div>
 
+
+
 <?php
 $args = array(
     'post_type' => 'blockquote', // Spécifiez le type de publication personnalisé
