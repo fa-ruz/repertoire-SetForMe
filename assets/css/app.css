@@ -1,3 +1,4 @@
+
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
 }
@@ -319,11 +320,7 @@ h1 {
 
 
 
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
+
 :root{
   --light-purple-color: #8854c0;
   --light-color: #fff;
@@ -410,11 +407,4 @@ box-sizing: border-box;
   flex-direction: column;
 }
 
-/* Le reste de votre CSS ici */
 
-
-.icone {
-  width: 10px; /* Ajustez la largeur de l'icône selon vos besoins */
-  height: 10px; /* Ajustez la hauteur de l'icône selon vos besoins */
-  margin-right: 10px; /* Espace à droite de l'icône (ajustez selon vos besoins) */
-}

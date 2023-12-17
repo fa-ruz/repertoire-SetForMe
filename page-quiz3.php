@@ -15,14 +15,16 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         <h2 class="quiz-question" id="question">Quelle durée préférez-vous pour vos sessions d'entraînement ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('haut')">5 minutes</li>
+            <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="5m">
+              5 minutes
+            </li>
           </div>
           
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('bas')">10 minutes</li>
+            <li onclick="redirigerVersPageQuiz2('bas')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="10m"> 10 minutes</li>
           </div>
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('tout')">15 minutes</li>
+            <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="15m"> 15 minutes</li>
           </div>
         </div>
 

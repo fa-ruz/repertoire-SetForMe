@@ -11,17 +11,25 @@
         <h2 class="quiz-question" id="question">Pour commencer, quelle partie spécifique de votre corps souhaitez-vous cibler et travailler avec nos vidéos ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-          <li onclick="redirigerVersPageQuiz2('haut')">Haut du corps</li>
-          </div>
-          
-          <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('bas')">Bas du corps</li>
+            <li onclick="redirigerVersPageQuiz2('haut')">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Calque_1-2.png"class="img-fluid icon-img"width="40" height="40" alt="Icône Haut"> Haut du corps
+            </li>
           </div>
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('tout')">Tout le corps</li>
+            <li onclick="redirigerVersPageQuiz2('bas')">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Calque_1-2.png" class="img-fluid icon-img"width="40" height="40" alt="Icône Bas"> Bas du corps
+            </li>
+          </div>
+          <div class="col-md-6 text-center">
+            <li onclick="redirigerVersPageQuiz2('tout')">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Calque_1-2.png"class="img-fluid icon-img"width="40" height="40"> Tout le corps
+            </li>
           </div>
         </div>
         <div id="resultats"></div>
+      </div>
+      <div class="progress reset-bootstrap" role="progressbar" aria-label="Example 10px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%;"></div>
       </div>
     </div>
   </div>
@@ -32,9 +40,8 @@
     }
 
     function redirigerVersPageQuiz2(partieDuCorps) {
-    window.location.href = 'quiz2/?partie=' + partieDuCorps;
-}
-
+      window.location.href = 'quiz2/?partie=' + partieDuCorps;
+    }
   </script>
 </body>
 
