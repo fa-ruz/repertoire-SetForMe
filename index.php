@@ -1,12 +1,8 @@
 <?php
 get_header(); ?>
 
-
-
 <h1>TON CORPS,</h1>
 <h2>ton chemin.</h2>
-
-
 
 <h3>NOS CATEGORIES</h3>
 <p>Explorez nos catégories de sport :<br>
@@ -65,7 +61,7 @@ $custom_query = new WP_Query($args);
 if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
-        <div class="text-bg-dark p-3">
+        <div class="p-3 mb-2 bg-black text-white">
         <h3 class="blockqote-title" ><?php the_title(); ?></h3>
                 <?php the_content(); ?>
         </div>
