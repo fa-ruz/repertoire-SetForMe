@@ -9,22 +9,23 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
     <div class="quiz-container d-flex flex-column justify-content-center align-items-center mt-5" style="min-height: 70vh;">
       <div class="head-quiz">
         <button type="button" id="Retour" class="btn-retour btn-dark" onclick="retourPage()">Retour</button>
-        <h2 class="quiz-title">Q2</h2>
+        <h2 class="quiz-title">Q5</h2>
       </div>
       <div class="quiz-body">
-        <h2 class="quiz-question" id="question">Sélectionnez le niveau de compétence qui correspond le mieux à votre expérience actuelle</h2>
+        <h2 class="quiz-question" id="question">Quel est vptre principal objectif d'entraînement en ce moment ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('haut')">Débutant</li>
+            <li onclick="redirigerVersPageQuiz2('haut')">Perte de poids</li>
           </div>
           
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('bas')">Intermédiaire</li>
+            <li onclick="redirigerVersPageQuiz2('bas')">Renforcement musculaire</li>
           </div>
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('tout')">Avancé</li>
+            <li onclick="redirigerVersPageQuiz2('tout')">Bien-être</li>
           </div>
         </div>
+
     </div>
   </div>
 
@@ -33,6 +34,6 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
       window.history.back();
     }
     function redirigerVersPageQuiz2(partieDuCorps) {
-    window.location.href = 'quiz3/?partie=' + partieDuCorps;
+    window.location.href = 'résultat/?partie=' + partieDuCorps;
 }
 </script>
