@@ -32,19 +32,20 @@
                 'orderby'        => 'date', // Vous pouvez changer 'date' selon votre préférence
                 'order'          => 'ASC', // 'DESC' pour trier du plus récent au plus ancien, 'ASC' pour l'ordre inverse
             ]);
-            
             ?>
+            
             <?php while ($exercicesList->have_posts()) : $exercicesList->the_post(); ?>
                 <div class="col-md-4">
                     <div class="card custom-card">
+                        <div class="container-btn-img">
                         <img src="<?php echo the_post_thumbnail_url(); ?>" alt="test" class="card-img-top img-fluid">
                         <div class="card-body">
                             <h1><?php the_title(); ?></h1>
                             <p class="card-text"><?php the_content(); ?></p>
-                            <img src="<?php echo get_template_directory_uri(); ?> /assets\icon-oeil.png">
-                            <a href="https://youtu.be/1fjeQKI-5wg?si=thBEZ_Zh867e9is9" class="">
-                                <i class="bi bi-arrow-right"></i>
+                            <a href="https://www.youtube.com/watch?v=1fjeQKI-5wg" class="btn mt-auto align-self-end" id="monBtn">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sur-bouton.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
                             </a>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -53,6 +54,9 @@
     <?php endforeach; ?>
 
 </div>
+
+
+
 
 <?php get_footer(); ?>
 
