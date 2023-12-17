@@ -34,7 +34,9 @@
                     <a class="nav-link" href="<?php echo get_permalink(get_page_by_title('Quizz')); ?>">Quizz</a>
                 </li>
             </ul>
-            <button class="btn btn-dark" type="submit">Se connecter</button>
+
+            <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('CONNEXION/INSCRIPTION')); ?>">Se connecter</a>
+            
         </div>
     </div>
 </nav>
