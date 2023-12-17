@@ -408,4 +408,6 @@ h1 {
   flex-direction: column;
 }
 
-
+.img-fluid.icon-img:hover {
+  transform: rotate(12deg);
+  transition: transform 0.3s ease;}
