@@ -5,6 +5,7 @@ function enqueue_slick_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 ?>
+<div id="content-container">
 <section class="background-section">
     <!-- Contenu de la section -->
     <div class="content">
@@ -88,51 +89,42 @@ endif;
 
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
-
+<div id="resultats-carousel-container" class="mt-5">
 <h3>RÉSULTATS</h3>
 <p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <?php
-       $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => 2 // Récupère tous les articles
-    );
-    
-
-        $query = new WP_Query($args);
-
-        $active = 'active';
-
-        if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-        ?>
-                <div class="carousel-item <?php echo esc_attr($active); ?>">
-                    <div class="card text-white bg-dark">
-                        <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
-                        <div class="card-body">
-                            <h5 class="card-title"><?php the_title(); ?></h5>
-                            <p class="card-text"><?php the_content(); ?></p>
-                        </div>
-                    </div>
-                </div>
-        <?php
-                $active = '';
-            endwhile;
-            wp_reset_postdata();
-        endif;
-        ?>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image1.jpg" class="d-block w-100" alt="Image 1">
+      <div class="carousel-caption text-light"> <!-- Ajout de la classe text-light pour assurer une bonne visibilité du texte -->
+        <img src="profile1.jpg" alt="Profile Picture" class="rounded-circle">
+        <h5>Username 1</h5>
+        <p>Texte de l'avis 1</p>
+      </div>
     </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"><</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">></span>
-    </a>
+    <div class="carousel-item">
+      <img src="image2.jpg" class="d-block w-100" alt="Image 2">
+      <div class="carousel-caption text-light">
+        <img src="profile2.jpg" alt="Profile Picture" class="rounded-circle">
+        <h5>Username 2</h5>
+        <p>Texte de l'avis 2</p>
+      </div>
+    </div>
+    <!-- Ajoutez d'autres éléments de carousel selon vos besoins -->
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+</div>
+<?php get_footer(); ?>
 
 <script>
   jQuery(document).ready(function ($) {
@@ -145,5 +137,5 @@ wp_reset_postdata(); // Rétablir les données de publication originales
 });
 
 </script>
+</div>
 
-<?php get_footer(); ?>
