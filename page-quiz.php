@@ -37,6 +37,7 @@ if (isset($_POST['reponse_q1'])) {
 </div>
   </div>
 
+  
   <script>
     function retourPage() {
       window.history.back();

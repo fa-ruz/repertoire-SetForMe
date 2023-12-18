@@ -117,6 +117,7 @@ wp_reset_postdata(); // Rétablir les données de publication originales
     ?>
 </div>
 
+
 <script>
     jQuery(document).ready(function($) {
         $('.carousel').slick({

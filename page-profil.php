@@ -4,7 +4,7 @@
 <div class="text-bg p-3"><h2>MON PROFIL</h2></div>
 <div class="spacer"></div>
 
-
+ 
 
 
 <?php get_footer(); ?>
