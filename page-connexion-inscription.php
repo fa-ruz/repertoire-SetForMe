@@ -33,7 +33,7 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
     </div>
 
 
-<div class="col-md-6 float-end" style="margin-top: 105px;"> <!-- Ajustez la valeur selon vos préférences -->
+<div class="col-md-6 float-end" style="margin-top: 70px;"> <!-- Ajustez la valeur selon vos préférences -->
 
 <form class="container-titre-co" method="POST">
     <h2>Déjà inscrit ?</h2>

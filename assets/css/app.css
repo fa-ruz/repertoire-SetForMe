@@ -146,10 +146,6 @@
   background-color: white;
 }
 
-.btn-page-co a {
-  margin-left: 250px;
-  margin-top: 160px;
-}
 
 .btn-page-in a {
   margin-left: 250px;
@@ -163,7 +159,17 @@
   text-align: center;
 }
 .container-titre-in p {
-  margin-top: 25px;
+  margin-top: 35px;
+}
+
+.container-titre-in input.form-control {
+  background-color: #ededed; /* Changez la couleur de fond des champs de formulaire selon vos préférences */
+  border: 1px solid #ccc; /* Ajoutez une bordure pour séparer les champs */
+}
+
+.btn-page-co a {
+  margin-left: 250px;
+  margin-top: 160px;
 }
 
 .container-titre-co h2 {
@@ -171,9 +177,15 @@
 }
 .container-titre-co legend {
   text-align: center;
+  margin-bottom: 44px;
 }
 .container-titre-co p {
-  margin-top: 25px;
+  margin-top: 35px;
+}
+
+.container-titre-co input.form-control {
+  background-color: #ededed; /* Changez la couleur de fond des champs de formulaire selon vos préférences */
+  border: 1px solid #ccc; /* Ajoutez une bordure pour séparer les champs */
 }
 
 .text-bg {
