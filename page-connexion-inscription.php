@@ -8,7 +8,7 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
     
   <div class="col-md-6 float-end" style="margin-top: 70px;">
 
-    <form class="container" method="POST">
+    <form class="container-titre-in" method="POST">
     <h2>Nouveau ?</h2>
 
 <legend>Créez un compte pour un suivi personnalisé<br>dès maintenant !</legend>
@@ -25,15 +25,18 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
     <input type="password" class="form-control" name="password">
 </div>
 <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
-<button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
+        <div class="btn-page-in">
+        <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">S'inscrire</a>
+        </div>
     
 </form>
     </div>
 
 
 <div class="col-md-6 float-end" style="margin-top: 105px;"> <!-- Ajustez la valeur selon vos préférences -->
-    <form class="container" method="POST">
-        <h2>Déjà inscrit ?</h2>
+
+<form class="container-titre-co" method="POST">
+    <h2>Déjà inscrit ?</h2>
         
         <legend>Connectez-vous pour suivre vos progrès !</legend>
         <div class="mb-3">
@@ -45,7 +48,9 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
             <input type="password" class="form-control" name="password">
         </div>
         <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
-        <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
+        <div class="btn-page-co">
+        <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">Se connecter</a>
+        </div>
     </form>
 </div>
 </div>
