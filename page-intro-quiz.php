@@ -13,7 +13,7 @@ if ($custom_query->have_posts()) :
 ?>
         <div class="intro">
             <h2><?php the_title(); ?></h2>
-                <?php the_content(); ?>
+            <p><?php the_content(); ?></p>
                 <button class="inspi-valo"href="<?php echo get_permalink(get_page_by_title('quiz')); ?>"><div><div>Faire le quiz</div></div></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/femme-intro.png" alt="flèche" class="img-fluid">
         </div>

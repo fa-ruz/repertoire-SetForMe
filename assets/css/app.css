@@ -45,8 +45,19 @@
 .intro img {
   max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
   margin-left: 1050px; /* Ajoutez une marge à gauche pour l'espace entre le texte et l'image */
-  margin-top: -350px;
+  margin-top: -750px;
 }
+
+.intro h2 {
+  margin-top: 350px; /* Ajustez la valeur selon vos préférences pour l'espace entre le titre et le contenu */
+  margin-left: 50px;
+}
+
+.intro p {
+  margin-bottom: 50px; /* Ajustez la valeur selon vos préférences pour l'espace entre le texte et le bouton */
+  margin-left: 50px;
+}
+
 
 .inspi-valo {
   height: 68px;
