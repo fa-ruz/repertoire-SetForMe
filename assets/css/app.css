@@ -1,3 +1,4 @@
+
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
 }
@@ -124,7 +125,7 @@ h1 {
 .bg-black p {
   /* Ajoutez d'autres styles si nécessaire */
   text-align: center;
-  display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -424,3 +425,87 @@ h1 {
 .img-fluid.icon-img:hover {
   transform: rotate(12deg);
   transition: transform 0.3s ease;}
+
+
+.blockquote-title {
+    text-align: center;
+}
+.blockquote-container {
+  background-color: #333; /* Couleur de fond */
+
+  position: relative;
+}
+
+.blockquote-container::before,
+.blockquote-container::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Ajustez la largeur selon vos besoins */
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blockquote-container::before {
+  top: 0;
+  left: 0;
+}
+
+.blockquote-container::after {
+  bottom: 0;
+  right: 0;
+}
+
+.blockquote-title {
+  text-align: center;
+}
+/* styles.css ou votre fichier de style personnalisé */
+.blockquote-container-custom-padding {
+  padding: 8rem; /* ou la valeur de votre choix */
+}
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+
+.background-section {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  width: 20%;
+}
+
+.image {
+  width: 50%; /* Ajustez la largeur de l'image selon vos besoins */
+  margin-right: 0%; /* Ajustez la marge de droite selon vos besoins */
+  padding: 0%;
+
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.container-btn-img {
+  position: relative;
+}
+
+.card .btn {
+  width: 60px; /* Ajustez la largeur selon vos besoins */
+  height: 60px; /* Ajustez la hauteur selon vos besoins */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
