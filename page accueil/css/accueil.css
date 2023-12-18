@@ -1,0 +1,355 @@
+.contenu-corps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texte1 {
+    flex: 1;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.image1 {
+    flex: 1;
+    text-align: right;
+    padding: 2%;
+    max-width: 100%; 
+}
+
+
+header {
+    color: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo{
+    width: 15%;
+    margin-top: 0%;
+    position: relative;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+nav ul li {
+    margin-left: 50px; /* Utilisez margin-left au lieu de margin-right pour espacer les liens à droite */
+
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.cards {
+    display: flex;
+    overflow-x: scroll;
+    padding: 2vw;
+    justify-content: center;
+
+}
+
+.card {
+    margin-right: 2vw;
+    max-width: 15.5%;
+    text-align: center;
+    flex-shrink: 0;
+    
+}
+
+
+.card img {
+    max-width: 100%;
+    height:fit-content;
+}
+
+    
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+    text-align: center;
+}
+
+.contain{
+    display: flex;
+    align-items: center;
+}
+.image {
+    width: 30%; /* La largeur de l'image en pourcentage */
+    max-width: 100%; /* Garantit que l'image ne dépasse pas sa taille naturelle */
+    margin-right: 10px; /* Marge entre l'image et le texte */
+}
+
+
+.quatrieme-partie {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: left;
+}
+
+.titre4 {
+    font-size: 35px;
+    text-align: left;
+}
+
+.texte4 {
+    font-size: 30px;
+    text-align: left;
+}
+
+.nav-buttons {
+    text-align: right; /* Aligne le contenu à droite */
+}
+
+.nav-buttons button {
+    margin-top: 20px;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+    color: rgb(169, 149, 218);
+    transition: font-weight 0.1s;
+  }
+
+.nav-buttons button:active {
+    font-weight: bold; /* Texte en gras lorsque le bouton est appuyé */
+  }
+
+
+.carousel-images {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    
+}
+
+.carousel-images .images {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.carousel-images .images img {
+    flex: 0 0 auto; /* Permet aux images d'adapter leur largeur à la taille de la fenêtre */
+    height: 50%;
+    max-width: 100%; /* Les images ne dépasseront pas la largeur du conteneur */
+    margin-right: 0.1%;
+    margin-left: 30px;
+    margin-top: 40px
+}
+
+.centered-text {
+    text-align: center;
+    padding: 5vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-footer {
+ 
+    max-width: 100%;
+    margin-bottom: 5%; /* Espace entre le logo et les liens */
+    padding-top: 100px;
+    margin-left: 15px;
+}
+
+
+.liens-header {
+    align-self: flex-end;
+}
+
+.liens-header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Alignement horizontal des liens vers la droite */
+}
+
+
+.liens-header li {
+    margin-left: 10px; /* Espace entre les liens */
+    margin-right: 50px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.liens-header li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.ligne-separation {
+    width: 100%;
+    margin: 100px 0; /* Espace de 100 pixels au-dessus et en dessous de la ligne */
+
+    /* Ajouter un pseudo-élément ::before pour créer la ligne de séparation centrée */
+    content: "";
+    display: block;
+    width: 80%; /* Largeur de la ligne de séparation */
+    height: 1px; /* Épaisseur de la ligne */
+    background-color: #2b2a2a; /* Couleur de la ligne */
+    margin: 0 auto; /* Centre la ligne horizontalement */
+}
+
+.reseaux-sociaux {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+    padding-top: 2%;
+
+}
+
+.reseaux-sociaux a {
+    margin-right: 2%;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .text {
+        max-width: none;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+}
+
+/* Largeur de la barre de défilement */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Couleur de l'arrière-plan de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: #ffe6e6;
+}
+
+/* Couleur de la poignée de défilement */
+::-webkit-scrollbar-thumb {
+    background-color: #effe71;
+}
+
+/* Au survol de la poignée de défilement */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b9a6ca;
+}
+
+
+
+body.btn {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     ;
+  }
+  
+  .btn {
+    /* Clean style */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+
+    padding: 0;
+    color: black;
+    cursor: pointer;
+    /* Clean style */
+    
+    
+    --button-text-color-hover: white;
+    --border-color: #7D8082;
+    --button-background-color: #3f1b1b;
+
+    --button-inner-border-color: transparent;
+    --button-bits-color: #EFFE71;
+    --button-bits-color-hover: #EFFE71;
+    
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+  
+  .btn::before,
+  .btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0; left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid var(--border-color);
+    transition: all .15s ease;
+  }
+  
+  .btn::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .btn::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .btn:active,
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn:active::before,
+  .btn:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .btn:active::before {
+    top: 3px;
+  }
+  
+  .btn:active::after {
+    bottom: 3px;
+  }
+  
+  
