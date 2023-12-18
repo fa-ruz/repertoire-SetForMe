@@ -1,5 +1,10 @@
-<?php get_header(); ?>
+<?php get_header(); 
+function enqueue_slick_styles() {
+    wp_enqueue_style('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
+?>
 <section class="background-section">
     <!-- Contenu de la section -->
     <div class="content">
@@ -36,7 +41,7 @@
                         <?php endif; ?>
                         <div class="card-body d-flex flex-column">
                             <h4 class="card-title" ><?php the_title(); ?></h4>
-                            <a href="<?php the_permalink(); ?>" class="btn mt-auto align-self-end" id="monBtn">
+                            <a href="<?php the_permalink(); ?>" class="btn1 mt-auto align-self-end" id="monBtn">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
                                 <span style="margin-left:10px;"></span>
                             </a>
@@ -87,43 +92,58 @@ wp_reset_postdata(); // Rétablir les données de publication originales
 <h3>RÉSULTATS</h3>
 <p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
 
-<div class="carousel">
-    <?php
-    $args = array(
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <?php
+       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 5, // Nombre d'articles à afficher
+        'posts_per_page' => -1 // Récupère tous les articles
     );
+    
 
-    $query = new WP_Query($args);
+        $query = new WP_Query($args);
 
-    while ($query->have_posts()) : $query->the_post();
-    ?>
-        <div>
-            <div class="card mb-3" style="width: 573px; height: 446px; border: none; background-color: #000; color: #fff;">
-                <div class="card-body">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/etoiles.png" alt="test" class="card-img-top img-fluid" style="width: 220px; height: 38px; margin-bottom: 45px;">
-                    <p class="card-text"><?php the_content(); ?></p>
-                    <div class="profile-picture-container">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profil1.png" alt="test" class="card-img-top img-fluid" style="width: 89px; height: 89px;">
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        $active = 'active';
+
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+        ?>
+                <div class="carousel-item <?php echo esc_attr($active); ?>">
+                    <div class="card text-white bg-dark">
+                        <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_content(); ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    <?php
-    endwhile;
-    wp_reset_postdata();
-    ?>
+        <?php
+                $active = '';
+            endwhile;
+            wp_reset_postdata();
+        endif;
+        ?>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"><</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">></span>
+    </a>
 </div>
 
-
 <script>
-    jQuery(document).ready(function($) {
-        $('.carousel').slick({
-            // Configurations de Slick
-        });
+  jQuery(document).ready(function ($) {
+    $('#myCarousel').carousel({
+        interval: 5000, // Réglez l'intervalle en millisecondes (facultatif)
+        pause: 'hover'
     });
+
+    $('.carousel-control-prev, .carousel-control-next').css('color', 'black');
+});
+
 </script>
 
 <?php get_footer(); ?>
