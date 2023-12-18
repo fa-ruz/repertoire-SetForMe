@@ -10,7 +10,6 @@
     color: white;
 }
 
-
 .header2-nav .nav-item.dropdown:hover .dropdown-menu a {
     color: white;
 }
@@ -43,6 +42,100 @@
 .header2-nav .btn {
   border-radius: 0;
 }
+
+.intro img {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+  margin-left: 1050px; /* Ajoutez une marge à gauche pour l'espace entre le texte et l'image */
+  margin-top: -350px;
+}
+
+.inspi-valo {
+  height: 68px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  box-sizing: border-box;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.inspi-valo::before,
+.inspi-valo::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(0, 0, 0);
+  height: 30px;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+.inspi-valo::before {
+  top: 0;
+  border-bottom: none;
+}
+
+.inspi-valo::after {
+  bottom: 0;
+  border-top: none;
+}
+
+.inspi-valo > div {
+  background-color: #ccff33;
+  color: #0f1923;
+  height: 100%;
+  text-transform: uppercase;
+  vertical-align: center;
+  padding: 0 4em;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.inspi-valo > div > div {
+  z-index: 1;
+}
+
+.inspi-valo > div::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+  transform: skew(-10deg);
+  background-color: #000000;
+  width: 120%;
+  left: -130%;
+  transition: left 0.3s ease;
+}
+
+.inspi-valo > div::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  right: 0;
+  background-color: #0f1923;
+  transition: background-color 0.3s ease;
+}
+
+.inspi-valo:hover > div {
+  color: white;
+}
+
+.inspi-valo:hover > div::before {
+  left: -10%;
+}
+
+.inspi-valo:hover > div::after {
+  background-color: white;
+}
+
+
 
 .text-bg {
   display: flex;

@@ -87,6 +87,32 @@ add_action('init', 'create_blockquote_post_type');
 
 
 
+function create_intro_post_type() {
+    register_post_type('intro', [
+        'labels' => [
+            'name' => 'Intro',
+            'singular_name' => 'Intro'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'intro'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_intro_post_type');
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
