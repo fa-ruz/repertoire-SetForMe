@@ -17,6 +17,7 @@ function wpbootstrap_styles_scripts() {
 add_action('wp_enqueue_scripts', 'wpbootstrap_styles_scripts');
 
 
+
 // MENUS
 
 register_nav_menu('header', 'En tête du menu');
@@ -39,11 +40,11 @@ add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
 
 // CUSTOM POST TYPE
 
-function create_posttypes() {
+function create_exercices_posttypes() {
     register_post_type('exercices', [
         'labels' => [
-            'name' => ( 'exercices' ),
-            'singular_name' => ( 'exercices' )
+            'name' => 'Exercices',
+            'singular_name' => 'Exercice'
         ],
         'supports' => ['thumbnail', 'editor', 'title'],
         'public' => true,
@@ -52,4 +53,19 @@ function create_posttypes() {
         'show_in_rest' => false,
     ]);
 }
-add_action('init', 'create_posttypes');
+add_action('init', 'create_exercices_posttypes');
+
+function create_categories_posttypes() {
+    register_post_type('categories', [
+        'labels' => [
+            'name' => 'Categories',
+            'singular_name' => 'Category'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'categories'],
+        'show_in_rest' => false,
+    ]);
+}
+add_action('init', 'create_categories_posttypes');
