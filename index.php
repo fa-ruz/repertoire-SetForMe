@@ -97,7 +97,7 @@ wp_reset_postdata(); // Rétablir les données de publication originales
         <?php
        $args = array(
         'post_type' => 'post',
-        'posts_per_page' => -1 // Récupère tous les articles
+        'posts_per_page' => 2 // Récupère tous les articles
     );
     
 

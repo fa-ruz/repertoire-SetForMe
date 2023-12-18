@@ -44,11 +44,10 @@
 }
 
 .intro img {
-  max-width: 75%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
   margin-left: 1050px; /* Ajoutez une marge à gauche pour l'espace entre le texte et l'image */
-  margin-top: -750px;
+  margin-top: -350px;
 }
-
 .intro h2 {
   margin-top: 350px; /* Ajustez la valeur selon vos préférences pour l'espace entre le titre et le contenu */
   margin-left: 50px;
@@ -67,7 +66,6 @@
   box-sizing: border-box;
   padding: 7px;
   cursor: pointer;
-  margin-left: 50px;
 }
 
 .inspi-valo::before,
@@ -146,7 +144,6 @@
   background-color: white;
 }
 
-
 .btn-page-in a {
   margin-left: 250px;
   margin-top: 60px;
@@ -187,6 +184,7 @@
   background-color: #ededed; /* Changez la couleur de fond des champs de formulaire selon vos préférences */
   border: 1px solid #ccc; /* Ajoutez une bordure pour séparer les champs */
 }
+
 
 .text-bg {
   display: flex;
@@ -653,6 +651,3 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 20;
 }
-
-
-
