@@ -69,3 +69,18 @@ function create_categories_posttypes() {
     ]);
 }
 add_action('init', 'create_categories_posttypes');
+
+function create_blockquote_post_type() {
+    register_post_type('blockquote', [
+        'labels' => [
+            'name' => 'Blockquotes',
+            'singular_name' => 'Blockquote'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'blockquote'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_blockquote_post_type');
