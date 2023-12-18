@@ -5,8 +5,7 @@ get_header(); ?>
 <h2>ton chemin.</h2>
 
 <h3>NOS CATEGORIES</h3>
-<p>Explorez nos catégories de sport :<br>
-Découvrez, choisissez, excellez.</p>
+<p>Explorez nos catégories de sport :<br>Découvrez, choisissez, excellez.</p>
 
 <div class="container">
     <div class="row">
@@ -52,8 +51,8 @@ Découvrez, choisissez, excellez.</p>
 
 <?php
 $args = array(
-    'post_type' => 'blockquote', // Spécifiez le type de publication personnalisé
-    'posts_per_page' => 1, // -1 pour afficher tous les articles, ajustez selon vos besoins
+    'post_type' => 'blockquote',
+    'posts_per_page' => 1, 
 );
 
 $custom_query = new WP_Query($args);
@@ -62,7 +61,7 @@ if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
         <div class="p-3 mb-2 bg-black text-white">
-        <h3 class="blockqote-title" ><?php the_title(); ?></h3>
+        <h3 class="blockquote-title" ><?php the_title(); ?></h3>
                 <?php the_content(); ?>
         </div>
 <?php
@@ -74,5 +73,52 @@ endif;
 
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
-           
+
+
+<h3>RÉSULTATS</h3>
+<p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
+
+
+<div class="carousel">
+    <?php
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 5, // Nombre d'articles à afficher
+    );
+
+    $query = new WP_Query($args);
+
+    while ($query->have_posts()) : $query->the_post();
+    ?>
+        <div>
+            <div class="card mb-3" style="width: 573px; height: 446px; border: none; background-color: #000; color: #fff;">
+                <div class="card-body">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/etoiles.png" alt="test" class="card-img-top img-fluid" style="width: 220px; height: 38px; margin-bottom: 45px;">
+                    <p class="card-text"><?php the_content(); ?></p>
+                    <div class="profile-picture-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profil1.png" alt="test" class="card-img-top img-fluid" style="width: 89px; height: 89px;">
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php
+    endwhile;
+    wp_reset_postdata();
+    ?>
+</div>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('.carousel').slick({
+            // Configurations de Slick
+        });
+    });
+</script>
+
+
+
+
+
 <?php get_footer(); ?>

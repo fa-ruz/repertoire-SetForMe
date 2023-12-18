@@ -33,7 +33,7 @@
                 </ul>
             </div>
         </div>
-        <hr>
+        <hr class="mt-5">
     </div>
 
 

@@ -121,6 +121,15 @@ h1 {
     margin-bottom: 40px; /* Marge en bas pour l'espace */
 }
 
+.bg-black p {
+  /* Ajoutez d'autres styles si nécessaire */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .navbar-quiz img {
   margin-top: 100px; 
@@ -130,6 +139,11 @@ h1 {
 .entry-title {
   display: none;
 }
+
+
+
+
+
 
 
 
