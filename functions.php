@@ -70,17 +70,21 @@ function create_categories_posttypes() {
 }
 add_action('init', 'create_categories_posttypes');
 
-function create_blockquote_post_type() {
-    register_post_type('blockquote', [
-        'labels' => [
-            'name' => 'Blockquotes',
-            'singular_name' => 'Blockquote'
-        ],
-        'supports' => ['thumbnail', 'editor', 'title'],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'blockquote'],
-        'show_in_rest' => true,
-    ]);
+
+
+// Fonction pour stocker les réponses dans la session
+function enregistrer_reponse($question, $reponse) {
+    session_start();
+    $_SESSION[$question] = $reponse;
 }
-add_action('init', 'create_blockquote_post_type');
+
+// Fonction pour générer la recommandation en fonction des réponses
+function generer_recommandation($reponse_q1, $reponse_q2) {
+    // Implémentez votre logique de recommandation ici
+    // Cela pourrait être une recherche dans une base de données, une logique conditionnelle, etc.
+
+    // Exemple simple : recommandation basée sur les réponses à Q1 et Q2
+    $recommandation = "Vidéo recommandée pour " . $reponse_q1 . " et niveau " . $reponse_q2;
+
+    return $recommandation;
+}

@@ -27,10 +27,13 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
             <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="15m"> 15 minutes</li>
           </div>
         </div>
-
+      
+</div>
     </div>
   </div>
-
+  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+  <div class="progress-bar" style="width: 60%; background-color: #c0abff;"></div>
+</body>
   <script>
     function retourPage() {
       window.history.back();

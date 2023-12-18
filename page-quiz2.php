@@ -1,7 +1,10 @@
 <?php 
 /* Template Name: Quiz 2 */
 get_template_part('header3');
-?>
+if (isset($_POST['reponse_q2'])) {
+  $reponse_q1 = $_POST['reponse_q2'];
+  enregistrer_reponse('Q2', $reponse_q1);
+} ?>
 <?php
 $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
 ?>
@@ -36,7 +39,11 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
           </div>
         </div>
       </div>
+      
     </div>
+    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+  <div class="progress-bar" style="width: 40%; background-color: #c0abff;"></div>
+</div>
   </div>
 </body>
 

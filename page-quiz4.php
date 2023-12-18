@@ -27,6 +27,8 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         </div>
       </div>
     </div>
+    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+  <div class="progress-bar" style="width: 80%; background-color: #c0abff;"></div>
   </div>
 </body>
 

@@ -1,5 +1,8 @@
-<?php get_template_part('header3'); ?>
-
+<?php get_template_part('header3');
+if (isset($_POST['reponse_q1'])) {
+    $reponse_q1 = $_POST['reponse_q1'];
+    enregistrer_reponse('Q1', $reponse_q1);
+} ?>
 <body>
   <div class="wrapper">
     <div class="quiz-container d-flex flex-column justify-content-center align-items-center mt-5" style="min-height: 70vh;">
@@ -26,12 +29,12 @@
             </li>
           </div>
         </div>
-        <div id="resultats"></div>
       </div>
-      <div class="progress reset-bootstrap" role="progressbar" aria-label="Example 10px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar" style="width: 25%;"></div>
-      </div>
+     
     </div>
+    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+  <div class="progress-bar" style="width: 20%; background-color: #c0abff;"></div>
+</div>
   </div>
 
   <script>

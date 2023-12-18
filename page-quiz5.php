@@ -12,7 +12,7 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         <h2 class="quiz-title">Q5</h2>
       </div>
       <div class="quiz-body">
-        <h2 class="quiz-question" id="question">Quel est vptre principal objectif d'entraînement en ce moment ?</h2>
+        <h2 class="quiz-question" id="question">Quel est votre principal objectif d'entraînement en ce moment ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
             <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Perte"> Perte de poids</li>
@@ -28,12 +28,14 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
 
     </div>
   </div>
-
+  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+  <div class="progress-bar" style="width: 100%; background-color: #c0abff;"></div>
+</body>
   <script>
     function retourPage() {
       window.history.back();
     }
     function redirigerVersPageQuiz2(partieDuCorps) {
-    window.location.href = 'résultat/?partie=' + partieDuCorps;
+    window.location.href = 'recommandation/?partie=' + partieDuCorps;
 }
 </script>
