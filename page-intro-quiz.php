@@ -1,5 +1,4 @@
 <?php get_template_part('header3'); ?>
-
 <?php
 $args = array(
     'post_type' => 'intro',
