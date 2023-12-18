@@ -2,6 +2,7 @@
 
 <div class="text-bg p-3"><h2>HAUT DU CORPS</h2></div>
 <div class="spacer"></div>
+
 <div class="container mt-5">
     
     <?php
