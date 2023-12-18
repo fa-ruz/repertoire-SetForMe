@@ -1,11 +1,17 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
 
-<h1>TON CORPS,</h1>
-<h2>ton chemin.</h2>
-
-<h3>NOS CATEGORIES</h3>
-<p>Explorez nos catégories de sport :<br>Découvrez, choisissez, excellez.</p>
+<section class="background-section">
+    <!-- Contenu de la section -->
+    <div class="content">
+        <div class="text">
+            <h1>TON CORPS,</h1>
+            <h2>ton chemin.</h2>
+        </div>
+        <div class="image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accueil.png" alt="Votre Image">
+        </div>
+    </div>
+</section>
 
 <div class="container">
     <div class="row">
@@ -31,8 +37,8 @@ get_header(); ?>
                         <div class="card-body d-flex flex-column">
                             <h4 class="card-title" ><?php the_title(); ?></h4>
                             <a href="<?php the_permalink(); ?>" class="btn mt-auto align-self-end" id="monBtn">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
-                            <span style="margin-left:10px;"></span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
+                                <span style="margin-left:10px;"></span>
                             </a>
                         </div>
                     </div>
@@ -47,12 +53,10 @@ get_header(); ?>
     </div>
 </div>
 
-
-
 <?php
 $args = array(
     'post_type' => 'blockquote',
-    'posts_per_page' => 1, 
+    'posts_per_page' => 1,
 );
 
 $custom_query = new WP_Query($args);
@@ -60,9 +64,15 @@ $custom_query = new WP_Query($args);
 if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
-        <div class="p-3 mb-2 bg-black text-white">
-        <h3 class="blockquote-title" ><?php the_title(); ?></h3>
-                <?php the_content(); ?>
+        <div class="blockquote-container-custom-padding mb-2 position-relative bg-black text-white">
+            <!-- Image en haut à gauche -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon.png" alt="Image 1" class="image-top-left position-absolute" style="width: 42px; height: 100px; top: 0; left: 0;">
+
+            <!-- Image en bas à droite -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon2.png" class="image-bottom-right position-absolute" style="width: 42px; height: 100px; bottom: 0; right: 0;">
+
+            <h2 class="blockquote-title text-center mb-5"><?php the_title(); ?></h2>
+            <?php the_content(); ?>
         </div>
 <?php
     endwhile;
@@ -74,10 +84,8 @@ endif;
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
 
-
 <h3>RÉSULTATS</h3>
 <p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
-
 
 <div class="carousel">
     <?php
@@ -116,9 +124,5 @@ wp_reset_postdata(); // Rétablir les données de publication originales
         });
     });
 </script>
-
-
-
-
 
 <?php get_footer(); ?>
