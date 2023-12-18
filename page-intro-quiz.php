@@ -23,5 +23,6 @@ else :
     echo '<p>Aucun contenu trouvé</p>';
 endif;
 
+
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>

@@ -44,7 +44,7 @@
 }
 
 .intro img {
-  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+  max-width: 75%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
   margin-left: 1050px; /* Ajoutez une marge à gauche pour l'espace entre le texte et l'image */
   margin-top: -750px;
 }
@@ -68,6 +68,7 @@
   box-sizing: border-box;
   padding: 7px;
   cursor: pointer;
+  margin-left: 50px;
 }
 
 .inspi-valo::before,

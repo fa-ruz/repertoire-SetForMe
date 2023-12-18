@@ -6,12 +6,12 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
 <div class="container mt-5"> <!-- Augmentation de la marge supérieure à mt-5 -->
   <div class="row">
     
-    <div class="col-md-6 float-start">
+  <div class="col-md-6 float-end" style="margin-top: 70px;">
 
     <form class="container" method="POST">
     <h2>Nouveau ?</h2>
-<?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
 
+<legend>Créez un compte pour un suivi personnalisé<br>dès maintenant !</legend>
 <div class="mb-3">
     <p>Pseudo</p> 
     <input type="text" class="form-control" name="pseudo">
@@ -24,16 +24,18 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
     <p>Password</p> 
     <input type="password" class="form-control" name="password">
 </div>
-
+<?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
 <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
+    
 </form>
     </div>
 
-    <div class="col-md-6 float-end">
 
-      <form class="container" method="POST">
-      <h2>Déjà inscrit ?</h2>
-        <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
+<div class="col-md-6 float-end" style="margin-top: 105px;"> <!-- Ajustez la valeur selon vos préférences -->
+    <form class="container" method="POST">
+        <h2>Déjà inscrit ?</h2>
+        
+        <legend>Connectez-vous pour suivre vos progrès !</legend>
         <div class="mb-3">
             <p>Pseudo</p> 
             <input type="text" class="form-control" name="pseudo">
@@ -42,8 +44,9 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
             <p>Password</p> 
             <input type="password" class="form-control" name="password">
         </div>
+        <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
         <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
     </form>
-    </div>
-  </div>
+</div>
+</div>
 </div>
