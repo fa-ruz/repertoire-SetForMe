@@ -19,9 +19,9 @@
             </div>
 
             <div class="col-md">
-                <h6>Quizz</h6>
+                <h6>Quiz</h6>
                 <ul class="footer-links">
-                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('quizz'))); ?>">Faire le quizz</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('quizz'))); ?>">Faire le quiz</a></li>
                 </ul>
             </div>
 
