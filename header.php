@@ -37,6 +37,7 @@
 
             <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('CONNEXION/INSCRIPTION')); ?>">Se connecter</a>
             
+            
         </div>
     </div>
 </nav>
