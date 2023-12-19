@@ -8,14 +8,26 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 ?>
 
 
+<style>
+            body {
+            background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes.png');
+            background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+            }
+            </style>
+
 <div class="content">
+    <div class="image">
     <div class="text">
         <h1>TON CORPS,</h1>
         <h2>ton chemin.</h2>
     </div>
-    <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accuei.png" alt="Votre Image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accueil-femme.png" alt="Votre Image">
     </div>
+    <button class="inspi-valo2" onclick="redirectToQuizPage()">
+                <div>
+                    <div>Faire le quiz</div>
+                </div>
+            </button>
 </div>
 
 <h2 class="titre-resultat"> NOS CATÉGORIES</h2>

@@ -1,3 +1,32 @@
+.image {
+  flex: 1; /* Utilise la moitié droite de l'écran */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end; /* Aligne l'image à l'extrémité droite du conteneur */
+  align-items: center; /* Centre l'image verticalement */
+}
+
+.image img {
+  float: right;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; /* Décale le texte à gauche */
+}
+
+.text h1 {
+  font-size: 80px; /* Ajuste la taille de la police pour agrandir le texte */
+  margin-left: 20px;
+}
+
+.text h2 {
+  font-size: 80px; /* Ajuste la taille de la police pour agrandir le texte */
+  margin-left: 20px;
+}
+
 
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
@@ -143,6 +172,93 @@
 .inspi-valo:hover > div::after {
   background-color: white;
 }
+
+.inspi-valo2 {
+  height: 68px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  box-sizing: border-box;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.inspi-valo2::before,
+.inspi-valo2::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(0, 0, 0);
+  height: 30px;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+.inspi-valo2::before {
+  top: 0;
+  border-bottom: none;
+}
+
+.inspi-valo2::after {
+  bottom: 0;
+  border-top: none;
+}
+
+.inspi-valo2 > div {
+  background-color: #ccff33;
+  color: #0f1923;
+  height: 100%;
+  text-transform: uppercase;
+  vertical-align: center;
+  padding: 0 4em;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.inspi-valo2 > div > div {
+  z-index: 1;
+}
+
+.inspi-valo2 > div::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+  transform: skew(-10deg);
+  background-color: #000000;
+  width: 120%;
+  left: -130%;
+  transition: left 0.3s ease;
+}
+
+.inspi-valo2 > div::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  bottom: 0;
+  right: 0;
+  background-color: #0f1923;
+  transition: background-color 0.3s ease;
+}
+
+.inspi-valo2:hover > div {
+  color: white;
+}
+
+.inspi-valo2:hover > div::before {
+  left: -10%;
+}
+
+.inspi-valo2:hover > div::after {
+  background-color: white;
+}
+
 
 .btn-page-in a {
   margin-left: 250px;
