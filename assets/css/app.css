@@ -1,3 +1,9 @@
+.background-image {
+  background-image: url('/assets/images/accueil-formes.png');
+  /* Autres styles pour votre arrière-plan si nécessaire */
+}
+
+
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
 }

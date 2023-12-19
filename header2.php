@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?php echo get_permalink(get_page_by_title('Quiz')); ?>">Quizz</a>
+                <a class="nav-link" href="<?php echo get_permalink(get_page_by_title('Quiz')); ?>">Quiz</a>
                 </li>
             </ul>
             <a class="btn btn-light" href="<?php echo get_permalink(get_page_by_title('CONNEXION/INSCRIPTION')); ?>">Se connecter</a>

@@ -5,6 +5,8 @@ function enqueue_slick_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 ?>
+
+
 <div id="content-container">
 <section class="background-section">
     <!-- Contenu de la section -->
