@@ -609,43 +609,6 @@ h1 {
 /* Ajoutez ces styles à votre fichier CSS */
 
 
-.content {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.text {
-  width: 20%;
-}
-
-.image {
-  width: 50%; /* Ajustez la largeur de l'image selon vos besoins */
-  margin-right: 0%; /* Ajustez la marge de droite selon vos besoins */
-  padding: 0%;
-
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-}
-
-.container-btn-img {
-  position: relative;
-}
-
-.card .btn {
-  width: 60px; /* Ajustez la largeur selon vos besoins */
-  height: 60px; /* Ajustez la hauteur selon vos besoins */
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-}
 
 
 
@@ -714,8 +677,8 @@ h1 {
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 89px;
+  height: 89px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
@@ -741,4 +704,13 @@ h1 {
 
 #next-btn {
   right: 120px;
+}
+
+.titre-resultat {
+  margin-top: 40px; /* Ajustez la marge selon vos besoins */
+ margin-left: 90px; /* Ajustez la marge selon vos besoins */
+}
+.description-resultat {
+  margin-top: 30px; /* Ajustez la marge selon vos besoins */
+  margin-left: 90px; /* Ajustez la marge selon vos besoins */
 }

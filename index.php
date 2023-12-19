@@ -1,21 +1,25 @@
-<?php get_header(); 
+<?php
+get_header();
+
 function enqueue_slick_styles() {
     wp_enqueue_style('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
-
 ?>
 
-    <div class="content">
-        <div class="text">
-            <h1>TON CORPS,</h1>
-            <h2>ton chemin.</h2>
-        </div>
-        <div class="image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accueil.png" alt="Votre Image">
-        </div>
-    </div>
 
+<div class="content">
+    <div class="text">
+        <h1>TON CORPS,</h1>
+        <h2>ton chemin.</h2>
+    </div>
+    <div class="image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accuei.png" alt="Votre Image">
+    </div>
+</div>
+
+<h2 class="titre-resultat"> NOS CATÉGORIES</h2>
+<p class="description-resultat">Des réussites, des changements, des vies transformées. <br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
 
 <div class="container">
     <div class="row">
@@ -33,23 +37,29 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         if ($categories_query->have_posts()) :
             while ($categories_query->have_posts()) : $categories_query->the_post();
         ?>
-                <div class="col-md-6">
-                    <div class="card mb-4 rounded-0 bg-black text-white" >
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="img-fluid" width="728" height="533">
-                        <?php endif; ?>
-                        <div class="card-body d-flex flex-column">
-                            <h2 class="card-title" ><?php the_title(); ?></h2>
-                            <a href="<?php the_permalink(); ?>" class="btn1 mt-auto align-self-end" id="monBtn">
-                            </a>
-                        </div>
-                    </div>
+        <div class="col-md-6 mb-3">
+            <div class="card mb-3 rounded-0 bg-black text-white" style="max-width: 500px; margin: 0 auto;"> <!-- Adjusted max-width and added margin for smaller cards and centered alignment -->
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title"><?php the_title(); ?></h2>
+                    <a href="<?php the_permalink(); ?>" class="btn1 mt-auto align-self-end" id="monBtn">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
+                                <span style="margin-left:10px;"></span>
+                        <!-- Add your button content here -->
+                    </a>
                 </div>
+               
+            </div>
+            <p class="card-description mt-2" style="max-width: 50%;"><?php the_excerpt(); ?></p>
+
+        </div>
         <?php
             endwhile;
-            wp_reset_postdata(); // Réinitialiser les données de la requête
-        else :
-            echo 'Aucun article trouvé.';
+
+            // Reset post data
+            wp_reset_postdata();
         endif;
         ?>
     </div>
@@ -86,8 +96,8 @@ endif;
 
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
- <h2>RÉSULTATS</h2>
-<p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
+ <h2 class="titre-resultat"> RÉSULTATS</h2>
+<p class="description-resultat">Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
 <div id="carousel-container">
     <div id="card-slider">
         <div class="card2 rounded-0">
@@ -113,9 +123,9 @@ wp_reset_postdata(); // Rétablir les données de publication originales
                 <span class="star" data-index="4">★</span>
                 <span class="star" data-index="5">★</span>
             </div>
-            <p>SetForMe a vraiment changé la donne pour moi. Les vidéos personalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés</p>
+            <p>Les vidéos personnalisées sont vraiment adaptées à mes besoins, et le quizz m'a aidé à définir des objectifs clairs.  Une expérience fitness sur mesure. Bravo SetForMe !</p>
             <div class="profile-container">
-                <img class="profile-pic" src="images/pfp.png" alt="Profile 2">
+                <img class="profile-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/profil2.png" alt="Profile 2">
                 <p>Alexandre<br>32 ans</p>
             </div>
         </div>
@@ -128,10 +138,10 @@ wp_reset_postdata(); // Rétablir les données de publication originales
                 <span class="star" data-index="4">★</span>
                 <span class="star" data-index="5">★</span>
             </div>
-            <p>Texte de la troisième carte</p>
+            <p>Les vidéos correspondent parfaitement à mes attentes, et le quizz a rendu le processus vraiment interactif. Je recommande vivement ce site à tous ceux qui cherchent une approche personnalisée.</p>
             <div class="profile-container">
-                <img class="profile-pic" src="images/pfp.png" alt="Profile 3">
-                <p>Nom<br>Age</p>
+                <img class="profile-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/profil3.png" alt="Profile 3">
+                <p>Zoé<br>28 ans</p>
             </div>
         </div>
 
@@ -143,10 +153,10 @@ wp_reset_postdata(); // Rétablir les données de publication originales
                 <span class="star" data-index="4">★</span>
                 <span class="star" data-index="5">★</span>
             </div>
-            <p>Texte de la quatrième carte</p>
+            <p>SetForMe a vraiment changé la donne pour moi. Les vidéos personalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés</p>
             <div class="profile-container">
-                <img class="profile-pic" src="images/pfp.png" alt="Profile 4">
-                <p>Nom<br>Age</p>
+                <img class="profile-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/profil1.png" alt="Profile 1">
+                <p>Sarah<br>23 ans</p>
             </div>
         </div>
         <div class="card2 rounded-0">
@@ -157,10 +167,10 @@ wp_reset_postdata(); // Rétablir les données de publication originales
                 <span class="star" data-index="4">★</span>
                 <span class="star" data-index="5">★</span>
             </div>
-            <p>Texte de la cinquième carte</p>
+            <p>Les vidéos personnalisées sont vraiment adaptées à mes besoins, et le quizz m'a aidé à définir des objectifs clairs.  Une expérience fitness sur mesure. Bravo SetForMe !</p>
             <div class="profile-container">
-                <img class="profile-pic" src="images/pfp.png" alt="Profile 5">
-                <p>Nom<br>Age</p>
+                <img class="profile-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/profil2.png" alt="Profile 2">
+                <p>Alexandre<br>32 ans</p>
             </div>
         </div>
         <!-- Ajoutez d'autres cartes selon vos besoins -->
@@ -199,7 +209,7 @@ wp_reset_postdata(); // Rétablir les données de publication originales
     const starsContainers = document.querySelectorAll('.stars-container');
 
     // Définir le nombre d'étoiles attribuées pour chaque carte
-    const ratings = [3, 5, 2]; // Changez ces valeurs selon vos besoins
+    const ratings = [4, 5, 4, 3, 4]; // Changez ces valeurs selon vos besoins
 
     starsContainers.forEach((container, index) => {
         const stars = container.querySelectorAll('.star');
