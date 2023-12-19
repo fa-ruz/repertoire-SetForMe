@@ -656,20 +656,3 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 20;
 }
-
-
-
-.carousel-inner {
-  background-color: black; /* Couleur de fond des cartes */
-}
-
-.carousel-item {
-  max-width: 50%; /* Largeur maximale des cartes */
-  margin: auto; /* Centrer les cartes horizontalement */
-}
-
-#resultats-carousel-container {
-  max-height: 400px; /* Ajuste la hauteur maximale selon tes besoins */
-  overflow: hidden; /* Pour cacher tout excès de contenu */
-  position: relative; /* Assure que la position est relative pour permettre le positionnement des contrôles du carousel */
-}
