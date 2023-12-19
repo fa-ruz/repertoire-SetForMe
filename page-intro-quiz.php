@@ -18,7 +18,15 @@ if ($custom_query->have_posts()) :
                     <div>Faire le quiz</div>
                 </div>
             </button>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/femme-intro.png" alt="flèche">
+
+            <style>
+            body {
+            background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/forme-intro-e1703010327893.png');
+            background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+            background-position: right;
+            }
+            </style>
+
         </div>
 <?php
     endwhile;
