@@ -81,6 +81,7 @@ if ($custom_query->have_posts()) :
             <h2 class="blockquote-title text-center mb-5"><?php the_title(); ?></h2>
             <?php the_content(); ?>
         </div>
+        <p class="card-description mt-2"><?php the_excerpt(); ?></p>
 <?php
     endwhile;
 else :
@@ -88,32 +89,65 @@ else :
     echo '<p>Aucun contenu trouvé</p>';
 endif;
 
+
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
 <div id="resultats-carousel-container" class="mt-5">
 <h3>RÉSULTATS</h3>
 <p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="image1.jpg" class="d-block w-100" alt="Image 1">
-      <div class="carousel-caption text-light"> <!-- Ajout de la classe text-light pour assurer une bonne visibilité du texte -->
-        <img src="profile1.jpg" alt="Profile Picture" class="rounded-circle">
-        <h5>Username 1</h5>
-        <p>Texte de l'avis 1</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="image2.jpg" class="d-block w-100" alt="Image 2">
-      <div class="carousel-caption text-light">
-        <img src="profile2.jpg" alt="Profile Picture" class="rounded-circle">
-        <h5>Username 2</h5>
-        <p>Texte de l'avis 2</p>
-      </div>
-    </div>
-    <!-- Ajoutez d'autres éléments de carousel selon vos besoins -->
-  </div>
+<div class="carousel-images">
+                <div class="images">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="prev"><</button>
+                <button class="next">></button>
+            </div>
+        </div>
+        
+      </main>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+    const imagesContainer = document.querySelector(".carousel-images .images");
+    const imageWidth = imagesContainer.firstElementChild.clientWidth;
+    const totalImages = imagesContainer.childElementCount;
+    let currentIndex = 0;
+
+    function updateButtonsState() {
+        // Mettez à jour l'état des boutons selon le nouvel algorithme
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === totalImages - 1;
+    }
+
+    nextButton.addEventListener("click", function () {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+            const offset = -currentIndex * imageWidth;
+            imagesContainer.style.transform = `translateX(${offset}px)`;
+            updateButtonsState();
+        }
+    });
+
+    prevButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            const offset = -currentIndex * imageWidth;
+            imagesContainer.style.transform = `translateX(${offset}px)`;
+            updateButtonsState();
+        }
+    });
+
+    // Mettez à jour l'état des boutons au chargement de la page
+    updateButtonsState();
+});
+</script>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

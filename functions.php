@@ -147,6 +147,8 @@ add_action('init', 'create_etirements_post_type');
 
 
 
+// Ajouter le support des extraits pour le type de publication 'categories'
+add_post_type_support( 'categories', 'excerpt' );
 
 
 
