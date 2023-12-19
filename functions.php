@@ -151,6 +151,22 @@ add_action('init', 'create_etirements_post_type');
 // Ajouter le support des extraits pour le type de publication 'categories'
 add_post_type_support( 'categories', 'excerpt' );
 
+function create_resultats_post_type() {
+    register_post_type('resultats', [
+        'labels' => [
+            'name' => 'Resultats',
+            'singular_name' => 'Resultats'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'resultats'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_resultats_post_type');
+
+
 
 
 

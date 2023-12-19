@@ -37,7 +37,7 @@
             
             <?php while ($exercicesList->have_posts()) : $exercicesList->the_post(); ?>
                 <div class="col-md-4">
-                    <div class="card custom-card">
+                    <div class="card custom-card rounded-0">
                         <div class="container-btn-img">
                         <img src="<?php echo the_post_thumbnail_url(); ?>" alt="test" class="card-img-top img-fluid">
                         <div class="card-body">
