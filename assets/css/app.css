@@ -742,3 +742,15 @@ h1 {
 #next-btn {
   right: 120px;
 }
+
+.resultats h2 {
+  text-align: center;
+  margin-top: 150px; /* Ajustez la marge supérieure selon vos préférences */
+  font-size: 60px;
+}
+
+.resultats p {
+  text-align: center;
+  margin-bottom: 50px; /* Ajustez la marge supérieure selon vos préférences */
+  font-size: 24px;
+}
