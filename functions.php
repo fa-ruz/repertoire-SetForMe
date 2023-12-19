@@ -85,8 +85,6 @@ function create_blockquote_post_type() {
 }
 add_action('init', 'create_blockquote_post_type');
 
-
-
 function create_intro_post_type() {
     register_post_type('intro', [
         'labels' => [
@@ -100,13 +98,52 @@ function create_intro_post_type() {
         'show_in_rest' => true,
     ]);
 }
-add_action('init', 'create_intro_post_type');
+add_action('init', 'create_bdc_post_type');
 
+function create_bdc_post_type() {
+    register_post_type('bdc', [
+        'labels' => [
+            'name' => 'Bdc',
+            'singular_name' => 'Bdc'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'bdc'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_bdc_post_type');
 
+function create_tlc_post_type() {
+    register_post_type('tlc', [
+        'labels' => [
+            'name' => 'Tlc',
+            'singular_name' => 'Tlc'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'Tlc'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_tlc_post_type');
 
-
-
-
+function create_etirements_post_type() {
+    register_post_type('etirements', [
+        'labels' => [
+            'name' => 'Etirements',
+            'singular_name' => 'Etirements'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'etirements'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_etirements_post_type');
 
 
 
