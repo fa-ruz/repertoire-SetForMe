@@ -21,6 +21,7 @@ if ($custom_query->have_posts()) :
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hdc-1.png" alt="test" width="419" height="224" style="margin-left: 30px; margin-bottom: 50px;">
                 </div>
 
+
         </div>
 <?php
     endwhile;
