@@ -8,6 +8,7 @@ if (isset($_POST['reponse_q2'])) {
 <?php
 $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
 ?>
+
 <body>
   <div class="wrapper">
     <div class="quiz-container d-flex flex-column justify-content-center align-items-center mt-5" style="min-height: 70vh;">

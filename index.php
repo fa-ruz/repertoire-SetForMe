@@ -6,9 +6,6 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 ?>
 
-<div id="content-container">
-<section class="background-section">
-    <!-- Contenu de la section -->
     <div class="content">
         <div class="text">
             <h1>TON CORPS,</h1>
@@ -18,7 +15,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accueil.png" alt="Votre Image">
         </div>
     </div>
-</section>
+
 
 <div class="container">
     <div class="row">
@@ -42,10 +39,8 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
                             <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="img-fluid" width="728" height="533">
                         <?php endif; ?>
                         <div class="card-body d-flex flex-column">
-                            <h4 class="card-title" ><?php the_title(); ?></h4>
+                            <h2 class="card-title" ><?php the_title(); ?></h2>
                             <a href="<?php the_permalink(); ?>" class="btn1 mt-auto align-self-end" id="monBtn">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
-                                <span style="margin-left:10px;"></span>
                             </a>
                         </div>
                     </div>
@@ -81,7 +76,6 @@ if ($custom_query->have_posts()) :
             <h2 class="blockquote-title text-center mb-5"><?php the_title(); ?></h2>
             <?php the_content(); ?>
         </div>
-        <p class="card-description mt-2"><?php the_excerpt(); ?></p>
 <?php
     endwhile;
 else :
@@ -92,85 +86,136 @@ endif;
 
 wp_reset_postdata(); // Rétablir les données de publication originales
 ?>
-<div id="resultats-carousel-container" class="mt-5">
-<h3>RÉSULTATS</h3>
+ <h2>RÉSULTATS</h2>
 <p>Des réussites, des changements, des vies transformées.<br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
-
-<div class="carousel-images">
-                <div class="images">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bdc-1.png">
-                </div>
+<div id="carousel-container">
+    <div id="card-slider">
+        <div class="card2 rounded-0">
+            <div class="stars-container" id="stars-container-1">
+                <span class="star" data-index="1">★</span>
+                <span class="star" data-index="2">★</span>
+                <span class="star" data-index="3">★</span>
+                <span class="star" data-index="4">★</span>
+                <span class="star" data-index="5">★</span>
             </div>
-            <div class="nav-buttons">
-                <button class="prev"><</button>
-                <button class="next">></button>
+            <p>SetForMe a vraiment changé la donne pour moi. Les vidéos personalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés</p>
+            <div class="profile-container">
+                <img class="profile-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/profil1.png" alt="Profile 1">
+                <p>Sarah<br>23 ans</p>
             </div>
         </div>
-        
-      </main>
 
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-    const imagesContainer = document.querySelector(".carousel-images .images");
-    const imageWidth = imagesContainer.firstElementChild.clientWidth;
-    const totalImages = imagesContainer.childElementCount;
-    let currentIndex = 0;
+        <div class="card2 rounded-0">
+            <div class="stars-container" id="stars-container-2">
+                <span class="star" data-index="1">★</span>
+                <span class="star" data-index="2">★</span>
+                <span class="star" data-index="3">★</span>
+                <span class="star" data-index="4">★</span>
+                <span class="star" data-index="5">★</span>
+            </div>
+            <p>SetForMe a vraiment changé la donne pour moi. Les vidéos personalisées correspondent bien à mes besoins, et le quizz m'a aidé à cibler mes objectifs. J'adore la variété des exercices proposés</p>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/pfp.png" alt="Profile 2">
+                <p>Alexandre<br>32 ans</p>
+            </div>
+        </div>
 
-    function updateButtonsState() {
-        // Mettez à jour l'état des boutons selon le nouvel algorithme
-        prevButton.disabled = currentIndex === 0;
-        nextButton.disabled = currentIndex === totalImages - 1;
-    }
+        <div class="card2 rounded-0">
+            <div class="stars-container" id="stars-container-3">
+                <span class="star" data-index="1">★</span>
+                <span class="star" data-index="2">★</span>
+                <span class="star" data-index="3">★</span>
+                <span class="star" data-index="4">★</span>
+                <span class="star" data-index="5">★</span>
+            </div>
+            <p>Texte de la troisième carte</p>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/pfp.png" alt="Profile 3">
+                <p>Nom<br>Age</p>
+            </div>
+        </div>
 
-    nextButton.addEventListener("click", function () {
-        if (currentIndex < totalImages - 1) {
-            currentIndex++;
-            const offset = -currentIndex * imageWidth;
-            imagesContainer.style.transform = `translateX(${offset}px)`;
-            updateButtonsState();
-        }
-    });
-
-    prevButton.addEventListener("click", function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            const offset = -currentIndex * imageWidth;
-            imagesContainer.style.transform = `translateX(${offset}px)`;
-            updateButtonsState();
-        }
-    });
-
-    // Mettez à jour l'état des boutons au chargement de la page
-    updateButtonsState();
-});
-</script>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+        <div class="card2 rounded-0">
+            <div class="stars-container" id="stars-container-4">
+                <span class="star" data-index="1">★</span>
+                <span class="star" data-index="2">★</span>
+                <span class="star" data-index="3">★</span>
+                <span class="star" data-index="4">★</span>
+                <span class="star" data-index="5">★</span>
+            </div>
+            <p>Texte de la quatrième carte</p>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/pfp.png" alt="Profile 4">
+                <p>Nom<br>Age</p>
+            </div>
+        </div>
+        <div class="card2 rounded-0">
+            <div class="stars-container" id="stars-container-5">
+                <span class="star" data-index="1">★</span>
+                <span class="star" data-index="2">★</span>
+                <span class="star" data-index="3">★</span>
+                <span class="star" data-index="4">★</span>
+                <span class="star" data-index="5">★</span>
+            </div>
+            <p>Texte de la cinquième carte</p>
+            <div class="profile-container">
+                <img class="profile-pic" src="images/pfp.png" alt="Profile 5">
+                <p>Nom<br>Age</p>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres cartes selon vos besoins -->
+    </div>
+    <button id="prev-btn">&lt;</button>
+    <button id="next-btn">&gt;</button>
 </div>
-</div>
-<?php get_footer(); ?>
 
 <script>
-  jQuery(document).ready(function ($) {
-    $('#myCarousel').carousel({
-        interval: 5000, // Réglez l'intervalle en millisecondes (facultatif)
-        pause: 'hover'
+    const cardSlider = document.getElementById("card-slider");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    let currentIndex = 0;
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
     });
 
-    $('.carousel-control-prev, .carousel-control-next').css('color', 'black');
-});
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < cardSlider.children.length - 1) {
+            currentIndex++;
+            updateSlider();
+        }
+    });
 
+    function updateSlider() {
+        const marginValue = 100; // Ajustez la marge entre les cartes ici
+        const translateValue = -(currentIndex * (500 + marginValue)) + "px";
+        cardSlider.style.transform = "translateX(" + translateValue + ")";
+    }
+
+    // Gestion de la notation (étoiles)
+    const starsContainers = document.querySelectorAll('.stars-container');
+
+    // Définir le nombre d'étoiles attribuées pour chaque carte
+    const ratings = [3, 5, 2]; // Changez ces valeurs selon vos besoins
+
+    starsContainers.forEach((container, index) => {
+        const stars = container.querySelectorAll('.star');
+
+        stars.forEach((star, starIndex) => {
+            star.style.opacity = starIndex < ratings[index] ? 1 : 0.5;
+        });
+    });
 </script>
-</div>
+
+</body>
+</html>
+
+
+
+
+
+<?php get_footer(); ?>
 

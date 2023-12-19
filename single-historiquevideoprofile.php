@@ -7,3 +7,4 @@ if ($lien_video) {
     echo '<a href="' . esc_url($lien_video) . '">Regarder la vidéo</a>';
 }
 ?>
+

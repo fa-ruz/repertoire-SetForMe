@@ -43,3 +43,4 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
     }
   </script>
 </body>
+

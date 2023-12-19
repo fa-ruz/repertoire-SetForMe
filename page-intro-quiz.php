@@ -34,3 +34,4 @@ wp_reset_postdata(); // Rétablir les données de publication originales
         window.location.href = "<?php echo get_permalink(get_page_by_title('quiz')); ?>";
     }
 </script>
+
