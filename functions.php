@@ -150,6 +150,22 @@ add_action('init', 'create_etirements_post_type');
 // Ajouter le support des extraits pour le type de publication 'categories'
 add_post_type_support( 'categories', 'excerpt' );
 
+function create_profil_post_type() {
+    register_post_type('profil', [
+        'labels' => [
+            'name' => 'Profil',
+            'singular_name' => 'Profil'
+        ],
+        'supports' => ['thumbnail', 'editor', 'title'],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'profil'],
+        'show_in_rest' => true,
+    ]);
+}
+add_action('init', 'create_profil_post_type');
+
+
 
 
 
