@@ -3,6 +3,21 @@
   /* Autres styles pour votre arrière-plan si nécessaire */
 }
 
+.resultats h2 {
+  text-align: center;
+  margin-top: 150px; /* Ajustez la marge supérieure selon vos préférences */
+  font-size: 60px;
+}
+
+.resultats p {
+  text-align: center;
+  margin-bottom: 50px; /* Ajustez la marge supérieure selon vos préférences */
+  font-size: 24px;
+}
+
+.mon-compte {
+  margin-right: 500px;
+}
 
 .navbar-nav .nav-item.dropdown .dropdown-menu {
   border-radius: 0;
