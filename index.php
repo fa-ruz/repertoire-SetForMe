@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 <style>
             body {
-                background-image: url('http://localhost/SetForMe/wordpress/wp-content/uploads/2023/12/accueil-formes-femme.png');
+                background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes-femme-1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top; /* Adjust this property */
@@ -34,9 +34,11 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         <h1>TON CORPS,</h1>
         <h2>ton chemin.</h2>
     </div>
-    <button class="inspi-valo2" href="<?php echo get_permalink(get_page_by_title('intro-quiz')); ?>">
-        <div>Faire le quiz</div>
-    </button>
+    <button class="inspi-valo2" onclick="redirectToQuizPage()">
+                <div>
+                    <div>Faire le quiz</div>
+                </div>
+            </button>
 </div>
 
 
@@ -239,12 +241,15 @@ wp_reset_postdata(); // Rétablir les données de publication originales
             star.style.opacity = starIndex < ratings[index] ? 1 : 0.5;
         });
     });
+
+    function redirectToQuizPage() {
+        window.location.href = "<?php echo get_permalink(get_page_by_title('intro quiz')); ?>";
+    }
+
 </script>
 
 </body>
 </html>
-
-
 
 
 
