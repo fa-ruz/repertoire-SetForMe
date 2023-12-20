@@ -10,24 +10,37 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 <style>
             body {
-            background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes.png');
-            background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+                background-image: url('http://localhost/SetForMe/wordpress/wp-content/uploads/2023/12/accueil-formes-femme.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; /* Adjust this property */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0; /* Remove default margin */
+    
             }
+            html, body {
+  height: 100%;
+}
+.inspi-valo2 {
+        margin-bottom: 200px; /* Adjust the margin to move the button down */
+        /* Add any additional styles for the button here */
+        margin-top: 0;
+        margin-left: 50px;
+    }
+
+
             </style>
 
 <div class="content">
-    <div class="image">
     <div class="text">
         <h1>TON CORPS,</h1>
         <h2>ton chemin.</h2>
     </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/accueil-femme.png" alt="Votre Image">
-    </div>
     <button class="inspi-valo2" onclick="redirectToQuizPage()">
-                <div>
-                    <div>Faire le quiz</div>
-                </div>
-            </button>
+        <div>
+            <div>Faire le quiz</div>
+        </div>
+    </button>
 </div>
 
 <h2 class="titre-resultat"> NOS CATÉGORIES</h2>
@@ -56,10 +69,10 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
                 <?php endif; ?>
                 <div class="card-body d-flex flex-column">
                     <h2 class="card-title"><?php the_title(); ?></h2>
-                    <a href="<?php the_permalink(); ?>" class="btn1 mt-auto align-self-end" id="monBtn">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
-                                <span style="margin-left:10px;"></span>
-                        <!-- Add your button content here -->
+                    <a href="<?php the_permalink(); ?>" class="btn1 d-flex " id="monBtn">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone">
+                               
+                        
                     </a>
                 </div>
                

@@ -177,13 +177,21 @@ add_action('init', 'create_resultats_post_type');
 
 
 
+// function custom_rewrite_tag() {
+    // add_rewrite_tag('%stats%', '([^&]+)');
+//   }
+//   add_action('init', 'custom_rewrite_tag', 10, 0);
 
 
-
-
+// add_action('init', 'start_session', 1);
+// function start_session() {
+    // if(!session_id()) {
+        // session_start();
+    // }
+// }
 // Fonction pour stocker les réponses dans la session
 function enregistrer_reponse($question, $reponse) {
-    session_start();
+    // session_start(); apparemment on peut pas 
     $_SESSION[$question] = $reponse;
 }
 

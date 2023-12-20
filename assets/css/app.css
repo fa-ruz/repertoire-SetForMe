@@ -1,14 +1,4 @@
-.image {
-  flex: 1; /* Utilise la moitié droite de l'écran */
-  box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end; /* Aligne l'image à l'extrémité droite du conteneur */
-  align-items: center; /* Centre l'image verticalement */
-}
 
-.image img {
-  float: right;
-}
 
 .text {
   flex: 1;
@@ -20,11 +10,15 @@
 .text h1 {
   font-size: 80px; /* Ajuste la taille de la police pour agrandir le texte */
   margin-left: 20px;
+  margin-top: 150px;
+  margin-bottom: 0%;
+  
 }
 
 .text h2 {
   font-size: 80px; /* Ajuste la taille de la police pour agrandir le texte */
   margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 
@@ -841,3 +835,5 @@ h1 {
   margin-bottom: 50px; /* Ajustez la marge supérieure selon vos préférences */
   font-size: 24px;
 }
+
+
