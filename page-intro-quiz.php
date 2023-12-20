@@ -31,13 +31,13 @@ if ($custom_query->have_posts()) :
             background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/forme-intro-e1703010327893.png');
             background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
             background-position: right;
+            overflow: hidden;
             }
             </style>
-            
+
         <style> 
         .inspi-valo {
-        margin-bottom: 200px; /* Adjust the margin to move the button down */
-        /* Add any additional styles for the button here */
+        margin-bottom: 200px;
         margin-top: 0;
         margin-left: 50px;
     }
