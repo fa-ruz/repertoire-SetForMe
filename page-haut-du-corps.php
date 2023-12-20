@@ -43,9 +43,10 @@
                         <div class="card-body">
                             <h1><?php the_title(); ?></h1>
                             <p class="card-text"><?php the_content(); ?></p>
-                            <a href=<?php echo get_field('lien'); ?> class="btn mt-auto align-self-end" id="monBtn">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sur-bouton.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
-                            </a>
+                            <a href="<?php echo get_field('lien'); ?>" class="btn1 mt-auto align-self-end" id="monBtn" style="display: flex; flex-direction: column; align-items: center; position: relative; top: -250px;">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sur-bouton.png" alt="flèche" class="img-fluid" style="max-width: 60px;"></a>
+
+
                         </div>
                         </div>
                     </div>
