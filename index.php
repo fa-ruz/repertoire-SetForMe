@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 <style>
             body {
-            background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes.png');
+            background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes-2.png');
             background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
             }
             </style>
