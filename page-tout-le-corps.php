@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h1><?php the_title(); ?></h1>
                             <p class="card-text"><?php the_content(); ?></p>
-                            <a href="https://www.youtube.com/watch?v=1fjeQKI-5wg" class="btn mt-auto align-self-end" id="monBtn">
+                            <a href=<?php echo get_field('lien'); ?> class="btn mt-auto align-self-end" id="monBtn">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sur-bouton.png" alt="flèche" class="img-fluid" alt="icone" style="position:relative; z-index:20; margin:0px;">
                             </a>
                         </div>
@@ -55,10 +55,6 @@
     <?php endforeach; ?>
 
 </div>
-
-
-
-
 
 <?php get_footer(); ?>
 
