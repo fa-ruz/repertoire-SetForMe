@@ -20,8 +20,8 @@ if (isset($_POST['reponse_q1'])) {
         <h2 class="quiz-question" id="question">Pour commencer, quelle partie spécifique de votre corps souhaitez-vous cibler et travailler avec nos vidéos ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li>
-              <a href="<?= add_query_arg(['stats' => 1], home_url('/quiz2')) ?>">
+          
+            <li onclick="redirigerVersPageQuiz2('Haut')">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Calque_1-2.png"class="img-fluid icon-img"width="40" height="40" alt="Icône Haut"> Haut du corps
               </a>
             </li>

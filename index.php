@@ -27,9 +27,6 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         margin-top: 0;
         margin-left: 50px;
     }
-    
-
-
             </style>
 
 <div class="content">
@@ -37,14 +34,14 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         <h1>TON CORPS,</h1>
         <h2>ton chemin.</h2>
     </div>
-    <button class="inspi-valo2" href="<?php echo get_permalink(get_page_by_title('intro-quiz')); ?>" >
-            <div>Faire le quiz</div>
-        </div>
+    <button class="inspi-valo2" href="<?php echo get_permalink(get_page_by_title('intro-quiz')); ?>">
+        <div>Faire le quiz</div>
     </button>
 </div>
 
+
 <h2 class="titre-resultat"> NOS CATÉGORIES</h2>
-<p class="description-resultat">Des réussites, des changements, des vies transformées. <br>Explorez les témoignages SetForMe et laissez-vous inspirer</p>
+<p class="description-resultat">Explorez nos catégories de sport<br> Découvrez, choisissez, excellez.</p>
 
 <div class="container">
     <div class="row">
@@ -74,10 +71,9 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="fleche" class="img-fluid" alt="icone">
                 </a>
             </div>
-           
         </div> 
     </div>
-    <p class="card-description mt-2" style="max-width: 50%;"><?php the_excerpt(); ?></p>
+    <p class="card-description mt-2" style="max-width: 10%;"><?php the_excerpt(); ?></p>
 </div>
 
         <?php
