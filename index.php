@@ -69,7 +69,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         <div class="card-body d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="card-title"><?php the_title(); ?></h2>
-                <a href="<?php the_permalink(); ?>" class="btn1 d-flex " id="monBtn">
+                <a href="<?php echo home_url(get_field('page-name')); ?>" class="btn1 d-flex " id="monBtn">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="fleche" class="img-fluid" alt="icone">
                 </a>
             </div>
