@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/shy0dic.css">
 </head>
 
-<nav class="navbar navbar-expand-lg bg-white header3-nav">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand ms-4" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-secondaire.png" alt="Logo">

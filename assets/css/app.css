@@ -266,6 +266,7 @@
 }
 .container-titre-in p {
   margin-top: 35px;
+  font-weight: bold;
 }
 
 .container-titre-in input.form-control {
@@ -280,6 +281,7 @@
 
 .container-titre-co h2 {
   margin-left: 230px;
+  color: #ffffff;
 }
 .container-titre-co legend {
   text-align: center;
@@ -287,6 +289,8 @@
 }
 .container-titre-co p {
   margin-top: 35px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .container-titre-co input.form-control {
@@ -835,4 +839,39 @@ h1 {
   font-size: 24px;
 }
 
+.card3 {
+  margin-top: 50px;
+  margin-right: 40px;
+  width: 347px;  /*modifier la largeur des cartes*/
+  height: 471px;
+  padding: 30px;
+  text-align: left;
+  background-color: #ededed;
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+.card3 h2 {
+  text-align: center;
+}
+
+.card3 p {
+  text-align: center;
+  font-size: 24px;
+}
+
+.card3 .profile-pic {
+  width: 267px;
+  height: 267px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.centered-container {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-left: 40px;
+}
 

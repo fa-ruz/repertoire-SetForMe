@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
 
 <style>
             body {
-                background-image: url('http://localhost/SetForMe/wordpress/wp-content/uploads/2023/12/accueil-formes-femme.png');
+                background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/accueil-formes-femme-1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top; /* Adjust this property */
