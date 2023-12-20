@@ -27,6 +27,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         margin-top: 0;
         margin-left: 50px;
     }
+    
 
 
             </style>
@@ -36,8 +37,7 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         <h1>TON CORPS,</h1>
         <h2>ton chemin.</h2>
     </div>
-    <button class="inspi-valo2" onclick="redirectToQuizPage()">
-        <div>
+    <button class="inspi-valo2" href="<?php echo get_permalink(get_page_by_title('intro-quiz')); ?>" >
             <div>Faire le quiz</div>
         </div>
     </button>
@@ -62,24 +62,24 @@ add_action('wp_enqueue_scripts', 'enqueue_slick_styles');
         if ($categories_query->have_posts()) :
             while ($categories_query->have_posts()) : $categories_query->the_post();
         ?>
-        <div class="col-md-6 mb-3">
-            <div class="card mb-3 rounded-0 bg-black text-white" style="max-width: 500px; margin: 0 auto;"> <!-- Adjusted max-width and added margin for smaller cards and centered alignment -->
-                <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
-                <?php endif; ?>
-                <div class="card-body d-flex flex-column">
-                    <h2 class="card-title"><?php the_title(); ?></h2>
-                    <a href="<?php the_permalink(); ?>" class="btn1 d-flex " id="monBtn">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="flèche" class="img-fluid" alt="icone">
-                               
-                        
-                    </a>
-                </div>
-               
+       <div class="col-md-6 mb-3">
+    <div class="card mb-3 rounded-0 bg-black text-white" style="max-width: 500px; margin: 0 auto;">
+        <?php if (has_post_thumbnail()) : ?>
+            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
+        <?php endif; ?>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="card-title"><?php the_title(); ?></h2>
+                <a href="<?php the_permalink(); ?>" class="btn1 d-flex " id="monBtn">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-flèche.png" alt="fleche" class="img-fluid" alt="icone">
+                </a>
             </div>
-            <p class="card-description mt-2" style="max-width: 50%;"><?php the_excerpt(); ?></p>
+           
+        </div> 
+    </div>
+    <p class="card-description mt-2" style="max-width: 50%;"><?php the_excerpt(); ?></p>
+</div>
 
-        </div>
         <?php
             endwhile;
 

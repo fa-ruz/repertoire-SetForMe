@@ -1,6 +1,3 @@
-<?php
-require('actions/Utilisateurs/connexionaction.php'); ?>
-<?php require('actions/Utilisateurs/inscriptionaction.php'); ?> 
 <?php get_template_part('header4'); ?>
 
 <div class="container mt-5"> <!-- Augmentation de la marge supérieure à mt-5 -->
@@ -24,7 +21,6 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
     <p>Password</p> 
     <input type="password" class="form-control" name="password">
 </div>
-<?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
         <div class="btn-page-in">
         <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">S'inscrire</a>
         </div>
@@ -47,7 +43,6 @@ require('actions/Utilisateurs/connexionaction.php'); ?>
             <p>Password</p> 
             <input type="password" class="form-control" name="password">
         </div>
-        <?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>'; } ?>
         <div class="btn-page-co">
         <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">Se connecter</a>
         </div>
