@@ -31,11 +31,8 @@ if ($custom_query->have_posts()) :
             background-image: url('http://localhost/SetForMe/wordpress/wp-content/uploads/2023/12/Groupe-18.png');
             background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
             background-position: right;
-<<<<<<< Updated upstream
             overflow: hidden;
-=======
-            background-attachment: fixed; /* Fixe l'image de fond */
->>>>>>> Stashed changes
+
             }
             </style>
 
