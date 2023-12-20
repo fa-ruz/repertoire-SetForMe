@@ -10,6 +10,8 @@
                 height: 100vh; 
                 margin: 0; 
                 background-attachment: fixed; /* Fixe l'image de fond */
+                background-size: 50%;
+                overflow: hidden;
     
             }
         
