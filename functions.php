@@ -211,3 +211,17 @@ function enqueue_slick_scripts() {
     wp_enqueue_script('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_slick_scripts');
+
+// Hook pour intercepter l'inscription d'un utilisateur
+add_action('user_register', 'enregistrer_utilisateur_custom');
+
+function enregistrer_utilisateur_custom($user_id) {
+    // Récupérer les données du formulaire d'inscription
+    $pseudo = sanitize_text_field($_POST['pseudo']);
+    $mail = sanitize_text_field($_POST['mail']);
+    $password = sanitize_text_field($_POST['password']);
+
+    // Enregistrez les données dans les colonnes existantes de la table wp_users
+    wp_update_user(array('ID' => $user_id, 'user_nicename' => $pseudo, 'user_email' => $mail, 'user_pass' => $password));
+}
+
