@@ -1,4 +1,11 @@
 <?php get_template_part('header3'); ?>
+<style> .inspi-valo {
+        margin-bottom: 200px; /* Adjust the margin to move the button down */
+        /* Add any additional styles for the button here */
+        margin-top: 0;
+        margin-left: 50px;
+    }
+            </style>
 <?php
 $args = array(
     'post_type' => 'intro',
@@ -26,6 +33,17 @@ if ($custom_query->have_posts()) :
             background-position: right;
             }
             </style>
+            
+        <style> 
+        .inspi-valo {
+        margin-bottom: 200px; /* Adjust the margin to move the button down */
+        /* Add any additional styles for the button here */
+        margin-top: 0;
+        margin-left: 50px;
+    }
+            </style>
+
+
 
         </div>
 <?php

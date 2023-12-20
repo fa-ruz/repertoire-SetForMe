@@ -73,6 +73,7 @@
 .intro h2 {
   margin-top: 350px; /* Ajustez la valeur selon vos préférences pour l'espace entre le titre et le contenu */
   margin-left: 50px;
+  font-size: 60px;
 }
 
 .intro p {
