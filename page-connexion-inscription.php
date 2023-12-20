@@ -4,12 +4,12 @@
 
 <style>
             body {
-                background-image: url('http://localhost/wp-setforme/wp-content/uploads/2023/12/intro-bg.png');
+                background-image: url('http://localhost/SetForMe/wordpress/wp-content/uploads/2023/12/Groupe-18.png');
                 background-repeat: no-repeat;
                 background-position: right; 
                 height: 100vh; 
                 margin: 0; 
-                overflow: hidden; /* Empêche le défilement de la page */
+                background-attachment: fixed; /* Fixe l'image de fond */
     
             }
         
