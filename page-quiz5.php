@@ -12,30 +12,39 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         <h2 class="quiz-title">Q5</h2>
       </div>
       <div class="quiz-body">
-        <h2 class="quiz-question" id="question">Quel est votre principal objectif d'entraînement en ce moment ?</h2>
+        <h2 class="quiz-question" id="question">
+        <form id="questionForm" action="process.php" method="post">Quel est votre principal objectif d'entraînement en ce moment ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Perte"> Perte de poids</li>
+            <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Perte" name="q5" value="Perte de poids" onchange="submitForm(this.value)"> Perte de poids</li>
           </div>
           
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('bas')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Renforcement"> Renforcement musculaire</li>
+            <li onclick="redirigerVersPageQuiz2('bas')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Renforcement" name="q5" value="Renforcement musculaire" onchange="submitForm(this.value)"> Renforcement musculaire</li>
           </div>
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Bienetre"> Bien-être</li>
+            <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/coeur.png" class="img-fluid icon-img" width="30" height="30" alt="Bienetre" name="q5" value="Bien-être" onchange="submitForm(this.value)"> Bien-être</li>
           </div>
         </div>
+        <input type="hidden" name="nextQuestion" value="6">
+    </form>
 
     </div>
   </div>
   <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
   <div class="progress-bar" style="width: 100%; background-color: #c0abff;"></div>
 </body>
-  <script>
+<script>
     function retourPage() {
-      window.history.back();
+        window.history.back();
     }
+
     function redirigerVersPageQuiz2(partieDuCorps) {
-    window.location.href = 'recommandation/?partie=' + partieDuCorps;
-}
+        window.location.href = 'resultat'
+    }
+
+    function submitForm(answer) {
+        // Envoyer automatiquement le formulaire
+        document.getElementById("questionForm").submit();
+    }
 </script>

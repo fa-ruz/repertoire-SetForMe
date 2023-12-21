@@ -12,19 +12,22 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         <h2 class="quiz-title">Q4</h2>
       </div>
       <div class="quiz-body">
-        <h2 class="quiz-question" id="question">Quelle durée préférez-vous pour vos sessions d'entraînement ?</h2>
+        <h2 class="quiz-question" id="question">
+        <form id="questionForm" action="process.php" method="post">Quelle durée préférez-vous pour vos sessions d'entraînement ?</h2>
         <div class="row quiz-option">
           <div class="col-6 text-center">
             <li onclick="redirigerVersPageQuiz2('haut')">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/haltere.png" class="img-fluid icon-img" width="40" height="40" alt="Avec"> Avec
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/haltere.png" class="img-fluid icon-img" width="40" height="40" alt="Avec" name="q4" value="Avec" onchange="submitForm(this.value)"> Avec
             </li>
           </div>
           <div class="col-6 text-center">
             <li onclick="redirigerVersPageQuiz2('tout')">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/haltere.png" class="img-fluid icon-img" width="40" height="40" alt="Sans"> Sans
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/haltere.png" class="img-fluid icon-img" width="40" height="40" alt="Sans" name="q4" value="Sans" onchange="submitForm(this.value)"> Sans
             </li>
           </div>
         </div>
+        <input type="hidden" name="nextQuestion" value="5">
+    </form>
       </div>
     </div>
     <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
@@ -40,7 +43,13 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
     }
     function redirigerVersPageQuiz2(partieDuCorps) {
       window.location.href = 'quiz5/?partie=' + partieDuCorps;
+      
     }
+    function submitForm(answer) {
+
+// Envoyer automatiquement le formulaire
+document.getElementById("questionForm").submit();
+}
   </script>
 </body>
 

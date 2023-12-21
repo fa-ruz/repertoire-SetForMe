@@ -12,22 +12,24 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
         <h2 class="quiz-title">Q3</h2>
       </div>
       <div class="quiz-body">
-        <h2 class="quiz-question" id="question">Quelle durée préférez-vous pour vos sessions d'entraînement ?</h2>
+        <h2 class="quiz-question" id="question">
+        <form id="questionForm" action="process.php" method="post">Quelle durée préférez-vous pour vos sessions d'entraînement ?</h2>
         <div class="row quiz-option">
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="5m">
+            <li onclick="redirigerVersPageQuiz2('haut')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="5m" name="q3" value="5 minutes" onchange="submitForm(this.value)">
               5 minutes
             </li>
           </div>
           
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('bas')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="10m"> 10 minutes</li>
+            <li onclick="redirigerVersPageQuiz2('bas')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="10m" name="q3" value="10 minutes" onchange="submitForm(this.value)"> 10 minutes</li>
           </div>
           <div class="col-md-6 text-center">
-            <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="15m"> 15 minutes</li>
+            <li onclick="redirigerVersPageQuiz2('tout')"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bras.png" class="img-fluid icon-img" width="25" height="25" alt="15m" name="q3" value="15 minutes" onchange="submitForm(this.value)"> 15 minutes</li>
           </div>
         </div>
-      
+        <input type="hidden" name="nextQuestion" value="4">
+    </form>
 </div>
     </div>
   </div>
@@ -40,5 +42,10 @@ $partieDuCorps = isset($_GET['partie']) ? $_GET['partie'] : '';
     }
     function redirigerVersPageQuiz2(partieDuCorps) {
     window.location.href = 'quiz4/?partie=' + partieDuCorps;
+}
+function submitForm(answer) {
+
+// Envoyer automatiquement le formulaire
+document.getElementById("questionForm").submit();
 }
 </script>
