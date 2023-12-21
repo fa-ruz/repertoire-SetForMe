@@ -273,7 +273,7 @@
 
 .container-titre-in input.form-control {
   background-color: #ededed; /* Changez la couleur de fond des champs de formulaire selon vos préférences */
-  border: 1px solid #000000; /* Ajoutez une bordure pour séparer les champs */
+  border: 1px solid #ccc; /* Ajoutez une bordure pour séparer les champs */
 }
 
 .btn-page-co a {
@@ -297,7 +297,7 @@
 
 .container-titre-co input.form-control {
   background-color: #ededed; /* Changez la couleur de fond des champs de formulaire selon vos préférences */
-  border: 1px solid #000000; /* Ajoutez une bordure pour séparer les champs */
+  border: 1px solid #ccc; /* Ajoutez une bordure pour séparer les champs */
 }
 
 
@@ -317,7 +317,7 @@
   color: white; 
   display: inline-block;
   padding: 20px; 
-  margin-top: 8%; 
+  margin-top: 5px; 
   font-size: 50px;
 }
 h2 {
