@@ -98,7 +98,7 @@ function create_intro_post_type() {
         'show_in_rest' => true,
     ]);
 }
-add_action('init', 'create_bdc_post_type');
+add_action('init', 'create_intro_post_type');
 
 function create_bdc_post_type() {
     register_post_type('bdc', [
