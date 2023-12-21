@@ -13,7 +13,7 @@ if ($custom_query->have_posts()) :
         <div class="resultats">
             <h2><?php the_title(); ?></h2>
             <p><?php the_content(); ?></p>
-
+            
                 <div class="p-titre" style="display: flex; margin-bottom: 20px;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hdc-1.png" alt="test" width="419" height="224" style="margin-left: 50px; margin-right: 10px; margin-bottom: 50px;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hdc-1.png" alt="test" width="419" height="224" style="margin-left: 30px; margin-right: 10px; margin-bottom: 50px;">
