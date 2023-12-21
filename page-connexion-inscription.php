@@ -10,6 +10,8 @@
                 height: 100vh; 
                 margin: 0; 
                 background-attachment: fixed; /* Fixe l'image de fond */
+                background-size: 50%;
+                overflow: hidden;
     
             }
         
@@ -37,7 +39,7 @@
                     <input type="password" class="form-control" name="password">
                 </div>
                 <div class="btn-page-in">
-                    <a class="btn btn-dark" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">S'inscrire</a>
+                <button type="submit" class="btn btn-dark" name="submit" href="<?php echo get_permalink(get_page_by_title('Profil')); ?>">S'inscrire</button>
                 </div>
             </form>
         </div>
